@@ -1,0 +1,35 @@
+.main{
+    width:50%;
+    height: 60%;
+    background-color: blue;
+    /* height:100vh; */
+    /* position:absolute; */
+    top: 34%;
+    left: 38%;
+    
+    padding: 25px;
+}
+.main .sub{
+    margin:30px;
+    display:block;
+    padding:20px
+
+}
+.sub input{
+    margin: 20px;
+    padding: 5px;
+    text-align: center;
+}
+.sub button{
+    background: #fff;
+}
+.main h1{
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.demo{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.yyy{
+    color: black;
+}
