@@ -12,6 +12,9 @@ module.exports = {
         .collection(collections.SELLERS_COLLECTION)
         .insertOne(sellerData)
         .then((data) => {
+
+          console.log(data)
+
           resolve(data.ops[0]);
         });
     });

@@ -3,9 +3,10 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
-var hbs = require("express-handlebars");
+// var hbs = require("express-handlebars");
 var usersRouter = require("./routes/users");
 var adminRouter = require("./routes/admin");
+var sellerRouter = require("./routes/seller");
 var fileUpload = require("express-fileupload");
 var db = require("./config/connection");
 var session = require("express-session");
@@ -16,21 +17,21 @@ var cors = require('cors')
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
 
-app.engine(
-  "hbs",
-  hbs({
-    extname: "hbs",
-    defaultLayout: "layout",
-    layoutsDir: __dirname + "/views/layout/",
-    partialsDir: __dirname + "/views/header-partials/",
-    helpers: {
-      incremented: function (index) {
-        index++;
-        return index;
-      },
-    },
-  })
-);
+// app.engine(
+//   "hbs",
+//   hbs({
+//     extname: "hbs",
+//     defaultLayout: "layout",
+//     layoutsDir: __dirname + "/views/layout/",
+//     partialsDir: __dirname + "/views/header-partials/",
+//     helpers: {
+//       incremented: function (index) {
+//         index++;
+//         return index;
+//       },
+//     },
+//   })
+// );
 app.use(logger("dev"));
 app.use(express.json());
 app.use(cors())
@@ -45,6 +46,7 @@ db.connect((err) => {
 });
 app.use("/", usersRouter);
 app.use("/admin", adminRouter);
+app.use("/seller", sellerRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
