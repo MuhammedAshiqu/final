@@ -1,0 +1,10 @@
+.sidebar{
+    display: flex;
+    text-decoration: none;
+
+}
+.sidebar button{
+    background-color: blue;
+    padding: 5px;
+    margin-left: 2px;
+}

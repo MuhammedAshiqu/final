@@ -5,14 +5,14 @@ import { useEffect  } from 'react'
 import { useParams } from 'react-router-dom'
 import { DataContext } from '../../../Context/Context'
 import {useContext} from 'react'
-import './SingleProd.css'
+// import './SingleProd.css'
 import { toast, ToastContainer } from 'react-toastify'
 
 
 
-function Productd() {
+function Shopd() {
   const [detail,setdetails]=useState('')
-  const {Users,AdminTrue,Cartcount} = useContext(DataContext)
+  const {Sellers,AdminTrue,Cartcount} = useContext(DataContext)
   const [cartCount, setcartCount] = Cartcount
 
 
@@ -20,25 +20,11 @@ function Productd() {
 
   const {id}=useParams()
 
-  const addItem = (itm) => {
-    console.log(itm);
-   axios.get(`http://localhost:8008/add-to-cart/${itm}`).then((resp) => {
-       console.log(resp);
-       resp&& toast(resp.data.message)
-       alert("Product Added ,Checkout Cart")
-      //  setres(true)
-      //  setres(false)
-   })
-  }
-
-
-
-
 
     const description=()=>{
       console.log("product id",id)
-        axios.get(`http://localhost:8008/describ/${id}`).then((response)=>{
-            console.log("product details",response.data)
+        axios.get(`http://localhost:8008/seller/shopdescrib/${id}`).then((response)=>{
+            console.log("shop details",response.data)
             setdetails(response.data);
         })
     }
@@ -49,13 +35,6 @@ function Productd() {
     
     },[])
   return (
-
-
-
-
-
-
-
 
 
     <div>
@@ -75,10 +54,7 @@ function Productd() {
                 <h1 style={{color:"blue"}}>{detail.Name}</h1>
                   <h4>{detail.Category}</h4>
                     <u className='price'><h2>&#x20B9;{detail.Price}</h2></u>
-                    
-      <button onClick={()=>addItem(detail._id)} className=' bg-success' >Add to Cart</button>
-      <br />
-      <br />
+
 
 
 
@@ -94,4 +70,4 @@ function Productd() {
    )
 }
 
-export default Productd
+export default Shopd

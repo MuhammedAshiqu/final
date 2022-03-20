@@ -106,7 +106,7 @@ router.post("/signin", function (req, res) {
     let productId = req.params.id;
     let product = await sellerHelper.getProductDetails(productId);
     console.log(product);
-    res.render("admin/edit-product", { seller: true, product, administator });
+    res.render("seller/edit-product", { seller: true, product, administator });
   });
   
   router.post("/edit-product/:id", verifySignedIn, function (req, res) {
@@ -131,6 +131,15 @@ router.post("/signin", function (req, res) {
       res.json({message:'delete success'});
     });
   });
+
+  
+  router.get("/all-orders",  function (req, res) {
+  let administator = req.session.seller;
+  sellerHelper.getAllOrders().then((oreders) => {
+    res.json( { seller: true, administator, orders });
+  });
+});
+
 });
 
 module.exports = router;

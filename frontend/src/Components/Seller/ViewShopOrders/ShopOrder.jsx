@@ -1,9 +1,9 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
-function Allorders() {
+function Shoporders() {
     const [data, setdata] = useState([])
-    const getAllorders =()=>{
+    const getShoporders =()=>{
         axios.get('http://localhost:8008/seller/all-orders').then((response)=>{
             console.log(response);
             setdata(response.data.orders)
@@ -11,7 +11,7 @@ function Allorders() {
         
     }
     useEffect(() => {
-        getAllorders()
+        getShoporders()
     }, [])
     return (
         <div>
@@ -51,4 +51,4 @@ function Allorders() {
     )
 }
 
-export default Allorders
+export default Shoporders

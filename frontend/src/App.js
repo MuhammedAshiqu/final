@@ -37,6 +37,9 @@ import Signin from './Components/Seller/Signin/Signin';
 import AddShop from './Components/Seller/AddShop/AddShop';
 import AddProd from './Components/Seller/AddProduct/AddProd';
 import ShowallProds from './Components/Seller/ViewProduct/ViewProd';
+import Shopd from './Components/Seller/ShopDesc/Shopd';
+import Shoporders from './Components/Seller/ViewShopOrders/ShopOrder';
+import SellerH from './Components/Seller/SellerH/SellerH';
 
 
 function App() {
@@ -99,9 +102,12 @@ function App() {
       {/* seller Section */}
       <Route path='/seller-signup' component={SlrSignup} />
       <Route path='/seller-signin' component={Signin} />
-      <Route path='/seller-addshop' component={AddShop} />
+      {/* <Route path='/seller-addshop' component={AddShop} /> */}
       <Route path='/seller-addprod' component={AddProd} />
       <Route path='/seller-viewprod' component={ShowallProds} />
+      {/* <Route path='/shopd/:id' component={Shopd} /> */}
+      <Route path ='/seller-orders' component={Shoporders} />
+      <Route path='/seller' component={SellerH} />
       <Footer></Footer>
       </BrowserRouter>
       
