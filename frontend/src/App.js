@@ -32,6 +32,12 @@ import NewAdd1 from './Components/USERS/NewAdd1/NewAdd1';
 import Update from './Components/USERS/NewAdd1/Update';
 
 
+import SlrSignup from './Components/Seller/Signup/Signup';
+import Signin from './Components/Seller/Signin/Signin';
+import AddShop from './Components/Seller/AddShop/AddShop';
+import AddProd from './Components/Seller/AddProduct/AddProd';
+import ShowallProds from './Components/Seller/ViewProduct/ViewProd';
+
 
 function App() {
   const { Users,Cartcount,AdminTrue,IsLoaged } = useContext(DataContext)
@@ -86,12 +92,16 @@ function App() {
       <Route path='/messages' component={ChatTable} />
       <Route path='/manageproduct' component={ManageProduct} />
       <Route path='/editproduct/:id' component={NewAdd1} />
+      <Route path='/add-product' component={NewAdd} />
 
       {/* <Route path='/*' component={Cart} /> */}
 
-      
-      <Route path='/add-product' component={NewAdd} />
-
+      {/* seller Section */}
+      <Route path='/seller-signup' component={SlrSignup} />
+      <Route path='/seller-signin' component={Signin} />
+      <Route path='/seller-addshop' component={AddShop} />
+      <Route path='/seller-addprod' component={AddProd} />
+      <Route path='/seller-viewprod' component={ShowallProds} />
       <Footer></Footer>
       </BrowserRouter>
       

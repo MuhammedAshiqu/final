@@ -50,7 +50,7 @@ router.get("/signin", function (req, res) {
   }
   
 });
-
+// signin
 router.post("/signin", function (req, res) {
   console.log('input is',req.body);
   sellerHelper.doSignin(req.body).then((response) => {
@@ -67,7 +67,7 @@ router.post("/signin", function (req, res) {
     }
   });
 
-
+// add shop
   router.get('/addshop',verifySignedIn,(req,res)=>{
     console.log("seller",req.session.seller);
     res.render('sellers/seller-add-shop')
@@ -83,8 +83,54 @@ router.post("/signin", function (req, res) {
     })
     
   })
+// add product
+  router.get('/addproduct',verifySignedIn,(req,res)=>{
+    console.log("seller",req.session.seller);
+    res.render('sellers/seller-add-product')
+  })
+  router.post('/addproduct',verifySignedIn,(req,res)=>{
+    // console.log(req.body);
+    console.log(req.body);
+    let seller = nwslr
+  
+    
+    sellerHelper.addProduct(req.body,user).then((response)=>{
+      res.json({response:response,vibe:true})
+    })
+    
+  })
+  // get all prod and delete
 
-
+  router.get("/edit-product/:id", verifySignedIn, async function (req, res) {
+    let administator = req.session.seller;
+    let productId = req.params.id;
+    let product = await sellerHelper.getProductDetails(productId);
+    console.log(product);
+    res.render("admin/edit-product", { seller: true, product, administator });
+  });
+  
+  router.post("/edit-product/:id", verifySignedIn, function (req, res) {
+    let productId = req.params.id;
+    sellerHelper.updateProduct(productId, req.body).then(() => {
+      if (req.files) {
+        let image = req.files.Image;
+        if (image) {
+          image.mv("./public/images/product-images/" + productId + ".png");
+        }
+      }
+      res.redirect("/seller/all-products");
+    });
+  });
+  
+  router.post("/delete-product/:id",  function (req, res) {
+    let productId = req.params.id;
+    console.log('proid',productId);
+    
+    sellerHelper.deleteProduct(productId).then((response) => {
+      // fs.unlinkSync("./public/images/product-images/" + productId + ".png");
+      res.json({message:'delete success'});
+    });
+  });
 });
 
 module.exports = router;

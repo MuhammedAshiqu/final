@@ -73,5 +73,42 @@ module.exports = {
     })
    
   },
+  addProduct: (product,seller, callback) => {
+    return new Promise((resolve,reject)=>{
+      // console.log("my",user);
+      // console.log(product);
+      product.input.price = parseInt(product.input.price);
+      const products={
+        Name:product.input.name,
+        Category:product.input.category,
+        Price: product.input.price,
+        Description:product.input. description,
+        url:product.url,
+        CreatedBy:seller. Email,
+        reviews:[]
+      }
+      
+      db.get()
+        .collection(collections.PRODUCTS_COLLECTION)
+        .insertOne(products)
+        .then((data) => {
+          // console.log(data);
+          resolve(data.ops[0]._id);
+        });
+
+    })
+   
+  },
+  // view and delete prod
+  getAllProducts: () => {
+    return new Promise(async (resolve, reject) => {
+      let products = await db
+        .get()
+        .collection(collections.PRODUCTS_COLLECTION)
+        .find()
+        .toArray();
+      resolve(products);
+    });
+  },
 
 };

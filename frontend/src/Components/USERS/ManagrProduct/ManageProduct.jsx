@@ -35,7 +35,7 @@ function ManageProduct() {
   return (
     <div>
         
-      <table class="styled-table">
+      <table class="styled-table mx-4">
                 <thead>
                     <tr>
                         <th>Index</th>
@@ -44,6 +44,7 @@ function ManageProduct() {
                         <th>Category</th>
                         <th>Description</th>
                         <th>Product</th>
+                        <th>Option</th>
 
                     </tr>
                 </thead>
@@ -57,8 +58,8 @@ function ManageProduct() {
                             <td>{i.Category}</td>
                             <td>{i.Description}</td>
                             <td><img src={i.url} alt="" style={{width:"50px",height:"50px"}} /></td>
-                            <td><Link to={`/editproduct/${i._id}`}>Edit</Link></td>
-                            <td><button onClick={()=>deleteItem(i._id)} className='btn btn-danger' >Delete</button></td>
+                            <td class="pointer"><Link to={`/editproduct/${i._id}`}>Edit      </Link>    
+                            <button onClick={()=>deleteItem(i._id)} className='btn btn-danger' >Delete</button></td>
 
                                 
                             
