@@ -1,4 +1,4 @@
-.body {
+/* .body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom right, #e3f0ff, #fafcff);
@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 .container {
     width: 90%;
     height: 85%;
@@ -31,21 +31,25 @@
 
 }
 .left-img img{
-    width:7em;
+    width:.1em;
+    height: 8em;
     justify-content: space-between;
     display: flex;
     padding-top: 5em;
 }
 .center-img{
-    padding-top: 10rem;
+    
     height: auto;
     display: flex;
     justify-content: space-between;
     
 }
 .center-img img{
-    width: 40em;
+    width: 17em;
+    height:45em;
     padding-top: 24rem;
+    position: relative;
+    align-items: center;
 }
 .desc{
     width: 60%;

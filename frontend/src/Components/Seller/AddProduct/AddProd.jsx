@@ -13,20 +13,15 @@ function AddProd() {
     const [cartCount, setcartCount] = Cartcount
     const [res, setres] = useState(false)
     const history=useHistory()
-
-
-
-
     const [show, setShow] = useState(false);
 
-    
     const [image, setimage] = useState()
     const [isloading, setisloading] = useState(false)
     const [url, seturl] = useState()
     const [input, setinput] = useState({
         name: '',
         category: '',
-        price: null,
+        price: '',
         description: ''
     })
     const handleChange = (e) => {
@@ -77,13 +72,13 @@ function AddProd() {
                 </div></Modal.Title>
         </Modal.Header>
         <Modal.Body>  <div className="addprod-form">
-                    <input type="text" onChange={handleChange} name='name' placeholder='Product name' /><br /><br />
-                    <input type="text" onChange={handleChange} name='category' placeholder='Category' /><br /><br />
-                    <input type="text" onChange={handleChange} name='price' placeholder='Price' /><br /><br />
-                    <input type="text"  onChange={handleChange} name='description' placeholder='Description' />
+                    <input type="text" onChange={handleChange} name='name' placeholder='Product name' required/><br /><br />
+                    <input type="text" onChange={handleChange} name='category' placeholder='Category' required/><br /><br />
+                    <input type="text" onChange={handleChange} name='price' placeholder='Price' required/><br /><br />
+                    <input type="text"  onChange={handleChange} name='description' placeholder='Description'required />
                     <span style={{color:"orange"}}><h6>*not lessthan 10 words</h6></span><br />
-                    <input accept="image/png" onChange={(e) => setimage(e.target.files[0])} type="file" />
-                    <span style={{color:"red"}}><h4>*image mandatory</h4></span>
+                    <input accept="image/png" onChange={(e) => setimage(e.target.files[0])} type="file"required />
+                    
 
 
                 </div></Modal.Body>

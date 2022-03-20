@@ -60,7 +60,7 @@ function Signup() {
             <input type="text" name='Email' value={input.Email} onChange={handleChane}  placeholder='email' />
             <input type="text" name='Address' value={input.Address} onChange={handleChane}  placeholder='address' />
             <input type="number" name='Phone' value={input.Phone} onChange={handleChane}  placeholder='phonne number' />
-            <input type="password" name='Password' value={input.Password} onChange={handleChane}  placeholder='password' />
+            <input type="password" name='Password' value={input.Password} onChange={handleChane}  placeholder='password'  />
             
             <button  onClick={handleClick}>Signup</button>
             <Link to='/Login'>  <Button>Already have an account ?</Button> </Link>

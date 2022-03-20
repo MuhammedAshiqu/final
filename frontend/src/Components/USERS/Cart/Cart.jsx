@@ -82,9 +82,9 @@ function Cart() {
                     <div>
                     <div className='man'  >
                         <div className="top">
-                            <img src={i.product.url} height='100px' width='80px' alt="" />
-                            <h4>{i.product.Name}</h4>
-                            <h3>{i.product.Price}</h3>
+                            <img src={i.product?.url} height='100px' width='80px' alt="" />
+                            <h4>{i.product?.Name}</h4>
+                            <h3>{i.product?.Price}</h3>
                             
                         </div>
                         <div className="bottom">

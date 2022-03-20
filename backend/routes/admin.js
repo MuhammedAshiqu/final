@@ -163,6 +163,27 @@ router.get("/remove-all-users", verifySignedIn, function (req, res) {
   });
 });
 
+router.get("/all-sellers",  function (req, res) {
+  let administator = req.session.admin;
+  adminHelper.getAllSelles().then((sellers) => {
+    res.json( { admin: true, administator, sellers });
+  });
+});
+
+router.get("/remove-seller/:id", function (req, res) {
+  let sellerId = req.params.id;
+  adminHelper.removeSeller (sellerId).then(() => {
+    res.json({message:'seller deleted'});
+  });
+});
+
+router.get("/remove-all-sellers", verifySignedIn, function (req, res) {
+  adminHelper.removeAllSellers().then(() => {
+    res.redirect("/admin/all-sellers");
+  });
+});
+
+
 router.get("/all-orders", async function (req, res) {
   let administator = req.session.admin;
   let orders = await adminHelper.getAllOrders();

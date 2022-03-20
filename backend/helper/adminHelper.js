@@ -160,6 +160,39 @@ module.exports = {
     });
   },
 
+  getAllSellers: () => {
+    return new Promise(async (resolve, reject) => {
+      let sellers = await db
+        .get()
+        .collection(collections.SELLERS_COLLECTION)
+        .find()
+        .toArray();
+      resolve(sellers);
+    });
+  },
+
+  removeSeller: (sellerId) => {
+    return new Promise((resolve, reject) => {
+      db.get()
+        .collection(collections.SELLERS_COLLECTION)
+        .removeOne({ _id: objectId(sellerId) })
+        .then(() => {
+          resolve();
+        });
+    });
+  },
+
+  removeAllSellers: () => {
+    return new Promise((resolve, reject) => {
+      db.get()
+        .collection(collections.SELLERS_COLLECTION)
+        .remove({})
+        .then(() => {
+          resolve();
+        });
+    });
+  },
+
   getAllOrders: () => {
     return new Promise(async (resolve, reject) => {
       let orders = await db

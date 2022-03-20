@@ -43,6 +43,10 @@ function CardS({i,setres}) {
     return (
         
             <div className="card-item">
+             
+
+
+    <Link to={`/productd/${i._id}`}>
                 <ToastContainer
                     position="top-center"
                     autoClose={2001}
@@ -54,30 +58,19 @@ function CardS({i,setres}) {
                     draggable
                     pauseOnHover
                 />
-    
-    <div  className="photo">
-      <div style={{width:'200px',display:'flex',alignItems:'center'}} className="photo-tic">
-      <img width='200px' src={i.url} />
-      </div>
-      
-    </div>
-    <div className="description">
-      <Link to={`/productd/${i._id}`}><h1 style={{color:"blue"}}>{i.Name}</h1></Link>
-      <h4>{i.Category}</h4>
-      <h1>&#8377; {i.Price}</h1>
-      <p style={{color:"green"}}>
-       Limited Offer price!!!
-      </p>
-      <p className='one'>Checkout Now</p>
-      <p>upload :{i.CreatedBy}</p>
-      {isLoaged &&
-                <>
-      <Link to={`/chat/${i.CreatedBy}`}> <button >chat</button></Link>
-      </>
-}
-      {/* <button onClick={()=>addItem(i._id)} className=' bg-success' >Add to Cart</button> */}
-      {/* <button onClick={()=>wishList(i._id)} className=' bg-warning' >Wishlist</button> */}
-    </div>
+
+<figure class="snip1171">
+  <img src={i.url} alt="sample71"/>
+  <div class="price">&#8377; {i.Price}</div>
+  <figcaption>
+    <h3>{i.Name}</h3>
+    <p>
+    upload :{i.CreatedBy}
+    </p><div className="bt"><button onClick={()=>addItem(i._id)}>Add to Cart</button></div>
+  
+  </figcaption>
+</figure>
+</Link>
   </div>
         
     )

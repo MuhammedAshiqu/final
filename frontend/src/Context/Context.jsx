@@ -6,10 +6,12 @@ function Context({ children }) {
     const [state, setstate] = useState([])
     const [isLoaged, setisLoaged] = useState(false)
     const [adminTrue, setadminTrue] = useState(true)
+
     const [contact, setcontact] = useState([])
     const [user, setuser] = useState()
-    const [seller, setseller] = useState()
-    
+
+    const [seller, setseller] = useState([])
+    const [sellerTrue, setsellerTrue] = useState(true)
     const [cartCount, setcartCount] = useState([])
        
     return (

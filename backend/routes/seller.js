@@ -66,7 +66,7 @@ router.post("/signin", function (req, res) {
       res.json({message:'Invalid Email/Password'}).status(422)
     }
   });
-
+});
 // add shop
   router.get('/addshop',verifySignedIn,(req,res)=>{
     console.log("seller",req.session.seller);
@@ -87,17 +87,6 @@ router.post("/signin", function (req, res) {
   router.get('/addproduct',verifySignedIn,(req,res)=>{
     console.log("seller",req.session.seller);
     res.render('sellers/seller-add-product')
-  })
-  router.post('/addproduct',verifySignedIn,(req,res)=>{
-    // console.log(req.body);
-    console.log(req.body);
-    let seller = nwslr
-  
-    
-    sellerHelper.addProduct(req.body,user).then((response)=>{
-      res.json({response:response,vibe:true})
-    })
-    
   })
   // get all prod and delete
 
@@ -140,6 +129,14 @@ router.post("/signin", function (req, res) {
   });
 });
 
-});
+
+
+router.post('/addproduct',(req,res)=>{
+  sellerHelper.addProduct(req.body).then((response)=>{
+    res.json({response:response,vibe:true})
+  })
+  
+})
+
 
 module.exports = router;

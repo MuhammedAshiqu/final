@@ -78,8 +78,8 @@ module.exports = {
   },
   addProduct: (product,seller, callback) => {
     return new Promise((resolve,reject)=>{
-      // console.log("my",user);
-      // console.log(product);
+      console.log("my",seller);
+      console.log(product);
       product.input.price = parseInt(product.input.price);
       const products={
         Name:product.input.name,
@@ -87,7 +87,7 @@ module.exports = {
         Price: product.input.price,
         Description:product.input. description,
         url:product.url,
-        CreatedBy:seller. Email,
+        // CreatedBy:seller. Email,
         reviews:[]
       }
       
@@ -121,8 +121,6 @@ module.exports = {
 
     })
    
-  
-    
   },
   editprod:async(sellerid)=>{
      const prodData=await db.get().collection(collections.PRODUCTS_COLLECTION).findOne({_id:objectId(sellerid)})

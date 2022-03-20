@@ -116,156 +116,90 @@ async function displayRazorpay() {
 }
 
   return (
-    <div className="hei">
-      <div className="contact">
-        <div className="leftSide">
-          <div className="Contents">
-            <h1>CheckOut Here</h1>
-
-            {data && <h2>Total is : {data && data.total}</h2>}
-            <h4>Cart Items : {data && data.cartCount}</h4>
-          </div>
-          <div className="payment"></div>
-        </div>
-        <div className="rightSide">
-          <h1>Checkout Address</h1>
-
-          <form id="contact-form" method="POST">
-            <label htmlFor="name">Full Name</label>
-            <input
-              onChange={handleChange}
-              name="name"
-              placeholder="Enter full name..."
-              type="text"
-            />
-            <label htmlFor="email">Email</label>
-            <input
-              onChange={handleChange}
-              name="email"
-              placeholder="Enter email..."
-              type="email"
-            />
-
-            <label htmlFor="message">Address</label>
-            <textarea
-              onChange={handleChange}
-              rows="6"
-              placeholder="Address..."
-              name="address"
-              required
-            ></textarea>
-          </form>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "baseline",
-              justifyContent: "space-evenly",
-            }}
-            className="checkout-btns"
-          >
-            <button
-              className="btn btn-success"
-              style={{ height: "35px" }}
-              onClick={() => placeOrders("COD")}
-            >
-              Cash On Delivery
-            </button>
-            <button
-              className="btn btn-success"
-              style={{ height: "35px" }}
-              onClick={() =>displayRazorpay() }
-            >
-             Pay online
-            </button>
-
-            {/* <Stripe data={data} /> */}
-
-            <div className="">
-              {/* <h1><img src={logo} className="App-logo" alt="logo" /> Google Pay React Demo</h1> */}
-              {/* <hr /> */}
-              {/* <GooglePayButton
-       onClick={()=>placeOrders('CARD')}
-        environment="TEST"
-        paymentRequest={{
-          apiVersion: 2,
-          apiVersionMinor: 0,
-          allowedPaymentMethods: [
-            {
-              type: 'CARD',
-              parameters: {
-                allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
-                allowedCardNetworks: ['MASTERCARD', 'VISA'],
-              },
-              tokenizationSpecification: {
-                type: 'PAYMENT_GATEWAY',
-                parameters: {
-                  gateway: 'example',
-                  gatewayMerchantId: 'exampleGatewayMerchantId',
-                },
-              },
-            },
-          ],
-          merchantInfo: {
-            merchantId: '12345678901234567890',
-            merchantName: 'Demo Merchant',
-          },
-          transactionInfo: {
-            totalPriceStatus: 'FINAL',
-            totalPriceLabel: 'Total',
-            totalPrice: '1',
-            currencyCode: 'INR',
-            countryCode: 'US',
-          },
-          shippingAddressRequired: true,
-          callbackIntents: ['SHIPPING_ADDRESS', 'PAYMENT_AUTHORIZATION'],
-        }}
-        onLoadPaymentData={paymentRequest => {
-          console.log('Success', paymentRequest);
-        }}
-        onPaymentAuthorized={paymentData => {
-            console.log('Payment Authorised Success', paymentData)
-            return { transactionState: 'SUCCESS'}
-          }
-        }
-        onPaymentDataChanged={paymentData => {
-            console.log('On Payment Data Changed', paymentData)
-            return { }
-          }
-        }
-        existingPaymentMethodRequired='true'
-        buttonColor='black'
-        buttonType='Buy'
-      /> */}
-            </div>
-
-            {/* <button onClick={()=>placeOrders('CARD')}>click</button> */}
-          </div>
-          <button
-            className="btn btn-success"
-            style={{ height: "35px" }}
-            onClick={delet}
-          >
-            Clear cart now
-          </button>
-          <div className="cards">
-            <h1>
-              <FaCcVisa />
-            </h1>
-            <h1>
-              <FaCcStripe />
-            </h1>
-            <h1>
-              <FaCcMastercard />
-            </h1>
-            <h1>
-              <FaCcAmazonPay />
-            </h1>
-            <h1>
-              <FaCcPaypal />
-            </h1>
-          </div>
-        </div>
-      </div>
+    <div className="">
+      <div class="container">
+  <div class="title">
+      <h2>Product Order Form</h2>
+  </div>
+<div class="d-flex">
+  <form action="" method="">
+    <label>
+      <span class="fname">First Name <span class="required">*</span></span>
+      <input type="text" name="fname" onChange={handleChange}/>
+    </label>
+    <label>
+      <span class="lname">Last Name <span class="required">*</span></span>
+      <input type="text" name="lname" onChange={handleChange}/>
+    </label>
+    <label>
+      <span>Company Name (Optional)</span>
+      <input type="text" name="cn" onChange={handleChange}/>
+    </label>
+    <label>
+      <span>Country <span class="required">*</span></span>
+      <select name="selection">
+        <option value="IND" onChange={handleChange}>India</option>
+      </select>
+    </label>
+    <label>
+      <span>Street Address <span class="required">*</span></span>
+      <input type="text" name="houseadd" placeholder="House number and street name" required onChange={handleChange}/>
+    </label>
+    <label>
+      <span>&nbsp;</span>
+      <input type="text" name="apartment" placeholder="Apartment, suite, unit etc. (optional)" onChange={handleChange}/>
+    </label>
+    <label>
+      <span>Town / City <span class="required">*</span></span>
+      <input type="text" name="city" onChange={handleChange}/> 
+    </label>
+    <label>
+      <span>State / County <span class="required">*</span></span>
+      <input type="text" name="city" onChange={handleChange}/> 
+    </label>
+    <label>
+      <span>Postcode / ZIP <span class="required">*</span></span>
+      <input type="text" name="city"onChange={handleChange}/> 
+    </label>
+    <label>
+      <span>Phone <span class="required">*</span></span>
+      <input type="tel" name="city"onChange={handleChange}/> 
+    </label>
+    <label>
+      <span>Email Address <span class="required">*</span></span>
+      <input type="email" name="city"onChange={handleChange}/> 
+    </label>
+  </form>
+  <div class="Yorder">
+    <table>
+      <tr>
+        <th colspan="2">Your order</th>
+      </tr>
+      <tr>
+        <td>Product Name</td>
+        <td>{data && data.Name}</td>
+      </tr>
+      <tr>
+        <td>Subtotal</td>
+        <td>{data && data.total}</td>
+      </tr>
+      <tr>
+        <td>Shipping</td>
+        <td>Free shipping</td>
+      </tr>
+    </table><br />
+   
+    <div>
+      <input type="radio" name="dbt" value="cd" onClick={() => placeOrders("COD")}/> Cash on Delivery
+    </div>
+    <div>
+      <input type="radio" name="dbt" value="cd" onClick={() =>displayRazorpay() } / > Pay Online <span>
+      <img src="https://www.logolynx.com/images/logolynx/c3/c36093ca9fb6c250f74d319550acac4d.jpeg" alt="" width="50"/>
+      </span>
+    </div>
+  </div>
+ </div>
+</div>
     </div>
   );
 }

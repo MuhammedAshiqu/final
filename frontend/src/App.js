@@ -40,11 +40,14 @@ import ShowallProds from './Components/Seller/ViewProduct/ViewProd';
 import Shopd from './Components/Seller/ShopDesc/Shopd';
 import Shoporders from './Components/Seller/ViewShopOrders/ShopOrder';
 import SellerH from './Components/Seller/SellerH/SellerH';
+import SellerHeader from './Components/Seller/SellerHeader/SellerHeader';
+import Showallsellers from './Components/ADMINS/ShowAllSellers/Showallsellers';
 
 
 function App() {
   const { Users,Cartcount,AdminTrue,IsLoaged } = useContext(DataContext)
   const [adminTrue, setadminTrue] = AdminTrue
+  // const [sellerTrue, setsellerTrue] = SellerTrue
   const [isLoaged,setisLoaged] =IsLoaged
   const [thing, setthing] = useState(false)
 
@@ -64,7 +67,7 @@ function App() {
       <BrowserRouter>
 
       {!adminTrue ? <Navbar1></Navbar1> : <Adminheader/> }
-      
+      {/* {!sellerTrue ? <Navbar1></Navbar1> : <SellerH/> } */}
       <Navbar2></Navbar2>
       
       
@@ -73,6 +76,7 @@ function App() {
       <Route path ='/admin' component={Admin} />
       <Route path ='/adminhome' component={Change} />
       <Route path ='/getallusers' component={Showallusers} />
+      <Route path ='/getallsellers' component={Showallsellers} />
       <Route path ='/allorders' component={Allorders} />
       {/* <Route path='/admins' component={AdminHome} /> */}
       <Route path='/service' component={NewService}></Route>
@@ -102,12 +106,12 @@ function App() {
       {/* seller Section */}
       <Route path='/seller-signup' component={SlrSignup} />
       <Route path='/seller-signin' component={Signin} />
-      {/* <Route path='/seller-addshop' component={AddShop} /> */}
+      <Route path='/seller-addshop' component={AddShop} />
       <Route path='/seller-addprod' component={AddProd} />
       <Route path='/seller-viewprod' component={ShowallProds} />
       {/* <Route path='/shopd/:id' component={Shopd} /> */}
       <Route path ='/seller-orders' component={Shoporders} />
-      <Route path='/seller' component={SellerH} />
+      <Route path='/seller' component={SellerHeader} />
       <Footer></Footer>
       </BrowserRouter>
       
