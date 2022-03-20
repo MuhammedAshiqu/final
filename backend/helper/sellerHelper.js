@@ -12,16 +12,15 @@ module.exports = {
         .collection(collections.SELLERS_COLLECTION)
         .insertOne(sellerData)
         .then((data) => {
-<<<<<<< HEAD
+
           console.log(data)
-=======
->>>>>>> main
+
           resolve(data.ops[0]);
         });
     });
   },
 
-<<<<<<< HEAD
+
   doSignin: (sellerData) => {
     console.log("login det",sellerData);
     return new Promise(async (resolve, reject) => {
@@ -114,9 +113,6 @@ module.exports = {
       resolve(products);
     });
   },
-=======
 
-
->>>>>>> main
 
 };

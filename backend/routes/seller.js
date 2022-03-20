@@ -14,7 +14,6 @@ const verifySignedIn = (req, res, next) => {
   }
 };
 
-<<<<<<< HEAD
 router.get("/signup", function (req, res) {
   if (req.session.signedIn) {
     res.redirect("/seller");
@@ -25,18 +24,6 @@ router.get("/signup", function (req, res) {
 
 router.post("/signup", function (req, res) {
   console.log("hlo")
-=======
-router.get("seller/signup", function (req, res) {
-  if (req.session.signedIn) {
-    res.redirect("/seller");
-  } else {
-    res.render("seller/signup", { admin: false, user:false });
-  }
-});
-
-router.post("seller/signup", function (req, res) {
-  
->>>>>>> main
   if(!req.body.Name||!req.body.Email||!req.body.Password){
     res.json({message:"all fields are required"})
   }
@@ -53,7 +40,6 @@ router.post("seller/signup", function (req, res) {
   });
 }
 
-<<<<<<< HEAD
 });
 router.get("/signin", function (req, res) {
   if (nw) {
@@ -148,6 +134,3 @@ router.post("/signin", function (req, res) {
 });
 
 module.exports = router;
-=======
-});
->>>>>>> main
