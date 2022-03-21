@@ -6,6 +6,7 @@ const { response } = require("express");
 const objectId=require("mongodb").ObjectID;
 var router = express.Router();
 let nwslr ={}
+
 const verifySignedIn = (req, res, next) => {
   if (nwslr) {
     next();
@@ -110,21 +111,12 @@ router.post("/signin", function (req, res) {
       res.redirect("/seller/all-products");
     });
   });
-  
-  router.post("/delete-product/:id",  function (req, res) {
-    let productId = req.params.id;
-    console.log('proid',productId);
-    
-    sellerHelper.deleteProduct(productId).then((response) => {
-      // fs.unlinkSync("./public/images/product-images/" + productId + ".png");
-      res.json({message:'delete success'});
-    });
-  });
 
   
   router.get("/all-orders",  function (req, res) {
+    console.log('first')
   let administator = req.session.seller;
-  sellerHelper.getAllOrders().then((oreders) => {
+  sellerHelper.getAllOrders().then((orders) => {
     res.json( { seller: true, administator, orders });
   });
 });
@@ -137,6 +129,22 @@ router.post('/addproduct',(req,res)=>{
   })
   
 })
+
+router.get('/all-prod', (req, res) => {
+  sellerHelper.getAllProducts().then((response) => {
+    res.json({response})
+  })
+})
+
+router.delete("/delete-product/:id",  function (req, res) {
+  let productId = req.params.id;
+  console.log('proid',productId);
+  
+  sellerHelper.deleteProduct(productId).then((response) => {
+    // fs.unlinkSync("./public/images/product-images/" + productId + ".png");
+    res.json({message:'delete success'});
+  });
+});
 
 
 module.exports = router;

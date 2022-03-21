@@ -45,7 +45,7 @@ import Showallsellers from './Components/ADMINS/ShowAllSellers/Showallsellers';
 
 
 function App() {
-  const { Users,Cartcount,AdminTrue,IsLoaged } = useContext(DataContext)
+  const { Users,Cartcount,AdminTrue,IsLoaged, sellerTrue } = useContext(DataContext)
   const [adminTrue, setadminTrue] = AdminTrue
   // const [sellerTrue, setsellerTrue] = SellerTrue
   const [isLoaged,setisLoaged] =IsLoaged
@@ -66,7 +66,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
 
-      {!adminTrue ? <Navbar1></Navbar1> : <Adminheader/> }
+      {adminTrue ?  <Adminheader/> : sellerTrue ? <SellerH/>: <Navbar1></Navbar1> }
+
       {/* {!sellerTrue ? <Navbar1></Navbar1> : <SellerH/> } */}
       <Navbar2></Navbar2>
       
@@ -109,7 +110,7 @@ function App() {
       <Route path='/seller-addshop' component={AddShop} />
       <Route path='/seller-addprod' component={AddProd} />
       <Route path='/seller-viewprod' component={ShowallProds} />
-      {/* <Route path='/shopd/:id' component={Shopd} /> */}
+      <Route path='/seller-shopd/:id' component={Shopd} />
       <Route path ='/seller-orders' component={Shoporders} />
       <Route path='/seller' component={SellerHeader} />
       <Footer></Footer>

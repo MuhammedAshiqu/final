@@ -15,7 +15,7 @@ function Context({ children }) {
     const [cartCount, setcartCount] = useState([])
        
     return (
-        <DataContext.Provider value={{Users:[user,setuser],Sellers:[seller,setseller], State:[state,setstate],AdminTrue:[adminTrue,setadminTrue],Cartcount:[cartCount,setcartCount],IsLoaged:[isLoaged,setisLoaged]}}>
+        <DataContext.Provider value={{Users:[user,setuser],Sellers:[seller,setseller], State:[state,setstate], sellerTrue: [sellerTrue, setsellerTrue],AdminTrue:[adminTrue,setadminTrue],Cartcount:[cartCount,setcartCount],IsLoaged:[isLoaged,setisLoaged]}}>
             {children}
         </DataContext.Provider>
     )

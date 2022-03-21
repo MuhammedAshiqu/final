@@ -73,9 +73,9 @@ module.exports = {
           resolve(data.ops[0]._id);
         });
 
-    })
-   
+    }) 
   },
+
   addProduct: (product,seller, callback) => {
     return new Promise((resolve,reject)=>{
       console.log("my",seller);
@@ -100,8 +100,8 @@ module.exports = {
         });
 
     })
-   
   },
+
   // view and delete prod
   getAllProducts: () => {
     return new Promise(async (resolve, reject) => {
@@ -113,6 +113,7 @@ module.exports = {
       resolve(products);
     });
   },
+
   getSignedSellerProducts:(email)=>{
     console.log('mail is',email);
     return new Promise(async(resolve,reject)=>{
@@ -120,12 +121,11 @@ module.exports = {
       resolve(items);
 
     })
-   
   },
+
   editprod:async(sellerid)=>{
      const prodData=await db.get().collection(collections.PRODUCTS_COLLECTION).findOne({_id:objectId(sellerid)})
-       return prodData
-     
+       return prodData 
   },
 
 
@@ -136,7 +136,29 @@ module.exports = {
         resolve(response)
       })
     })
+  },
+
+  deleteProduct: (proId)=>{
+    return new Promise(async(resolve, reject)=>{
+     await db.get()
+      .collection(collections.PRODUCTS_COLLECTION)
+      .deleteOne({ _id: objectId(proId) })
+      .then((result)=>{console.log("deleted")
+      resolve({message:"deleted"})
+    })
+    })
+  },
+
   
+  getAllOrders: () => {
+    return new Promise(async (resolve, reject) => {
+      let orders = await db
+        .get()
+        .collection(collections.ORDER_COLLECTION)
+        .find()
+        .toArray();
+      resolve(orders);
+    });
   },
 
 }

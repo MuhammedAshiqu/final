@@ -54,14 +54,9 @@ function Shopd() {
                 <h1 style={{color:"blue"}}>{detail.Name}</h1>
                   <h4>{detail.Category}</h4>
                     <u className='price'><h2>&#x20B9;{detail.Price}</h2></u>
-
-
-
-
-    
       <h3>Description:{detail.Description}</h3>
       <h6 style={{color:"GrayText"}}>uploaded by: {detail.CreatedBy}</h6>
-      <h6 style={{color:"GrayText"}}>uploaded by: {detail.UsserId}</h6>
+      <h6 style={{color:"GrayText"}}>uploaded by: {detail.sellerId}</h6>
                 </div>
                 
             </div>

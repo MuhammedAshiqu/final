@@ -6,14 +6,16 @@ function ShowallProds() {
     const [ref, setref] = useState(false)
     const [allprods, setallprods] = useState([])
     const getAllProds = () => {
-        axios.get('http://localhost:8008/seller/all-prod').then((result) => {
+        console.log('first')
+        axios.get(`http://localhost:8008/seller/all-prod/`).then((result) => {
             console.log(result);
-            setallprods(result.data.prods)
+            setallprods(result.data.response)
         })
     }
+
     const deleteProd =(id)=>{
         let it= window.confirm('Are You Sure Delete ?')
-        it && axios.get(`http://localhost:8008/seller/remove-prod/${id}`).then((res)=>{
+        it && axios.delete(`http://localhost:8008/seller/delete-product/${id}`).then((res)=>{
             console.log(res);
             setref(true)
             setref(false)
