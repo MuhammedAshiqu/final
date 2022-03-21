@@ -35,7 +35,7 @@ function Navbar () {
         notify()
         axios.get('http://localhost:8008/signout').then((res) => {
             console.log(res);
-            if (res.data.message = 'logout success') {
+            if (res.data.message === 'logout success') {
                 localStorage.removeItem('user')
                 setisLoaged(false)
                 history.push('/Login')
