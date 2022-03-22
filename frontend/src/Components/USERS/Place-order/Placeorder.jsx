@@ -117,8 +117,8 @@ async function displayRazorpay() {
 
   return (
     <div className="">
-      <div class="container">
-  <div class="title">
+      {/* <div class="order-container">
+  <div class="order-title">
       <h2>Product Order Form</h2>
   </div>
 <div class="d-flex">
@@ -199,8 +199,8 @@ async function displayRazorpay() {
     </div>
   </div>
  </div>
-</div>
-    </div>
+</div> */}
+jfif    </div>
   );
 }
 

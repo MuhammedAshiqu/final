@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { toast, ToastContainer } from 'react-toastify';
 import logo1 from './../../../loginq.jfif';
 import useForm from '../../Validation/Validation';
+import './Signin.css'
 
 function Signin() {
     //Final submit function
@@ -75,47 +76,137 @@ function Signin() {
         localStorage.getItem('seller');
     }, [reload]);
     return (
-        <div className='login'>
-            <div className='login-wrapper'>
-                <h3>Welcome Back</h3>
-                <p>please signin to continue</p>
-            </div>
-            <form className='login-form'>
-                {error ? <h2 style={{ color: 'red' }}>{error}</h2> : ''}
-                <h2>{message}</h2>
-                <input
-                    onChange={handleChane}
-                    name='Email'
-                    value={input.Email}
-                    placeholder='Username'
-                    class='input'
-                    autoComplete='on'
-                    type='email'
-                    required
-                />
-                <input
-                    onChange={handleChane}
-                    name='Password'
-                    value={input.Password}
-                    placeholder='Password'
-                    class='input'
-                    type='password'
-                    required
-                />
-                <center>
-                    <button onClick={handleClick} type='submit' class='button'>
-                        Login{' '}
-                    </button>
-                </center>
+        // <div className='login'>
+        //     <div className='login-wrapper'>
+        //         <h3>Welcome Back</h3>
+        //         <p>please signin to continue</p>
+        //     </div>
+        //     <form className='login-form'>
+        //         {error ? <h2 style={{ color: 'red' }}>{error}</h2> : ''}
+        //         <h2>{message}</h2>
+        //         <input
+        //             onChange={handleChane}
+        //             name='Email'
+        //             value={input.Email}
+        //             placeholder='Username'
+        //             class='input'
+        //             autoComplete='on'
+        //             type='email'
+        //             required
+        //         />
+        //         <input
+        //             onChange={handleChane}
+        //             name='Password'
+        //             value={input.Password}
+        //             placeholder='Password'
+        //             class='input'
+        //             type='password'
+        //             required
+        //         />
+        //         <center>
+        //             <button onClick={handleClick} type='submit' class='button'>
+        //                 Login{' '}
+        //             </button>
+        //         </center>
 
-                <Link style={{ textDecoration: 'none' }} to='/seller-signup'>
-                    <Button className='btn btn-primary text-dark'>
-                        SignUp
-                    </Button>
-                </Link>
+        //         <Link style={{ textDecoration: 'none' }} to='/seller-signup'>
+        //             <Button className='btn btn-primary text-dark'>
+        //                 SignUp
+        //             </Button>
+        //         </Link>
 
-                {/* <p className='login-form-bottontext'>Don't have an account? <span>Signup</span></p> */}
-            </form>
+        //         {/* <p className='login-form-bottontext'>Don't have an account? <span>Signup</span></p> */}
+        //     </form>
+        // </div>
+
+
+        // try
+        <div>
+            <div>
+      <div class="container">
+        <div class="c1">
+          <div class="c11">
+            <h1 class="mainhead">PICK YOUR SPOT</h1>
+            <p class="mainp">
+              Just click the buttons below to toggle between SignIn & SignUp
+            </p>
+          </div>
+          <div id="left">
+            <h1 class="s1class">
+              <span>SIGN</span>
+              <span class="su">IN</span>
+            </h1>
+          </div>
+          <div id="right">
+            <h1 class="s2class">
+              <span>SIGN</span>
+              <span class="su">UP</span>
+            </h1>
+          </div>
+        </div>
+        <div class="c2">
+          <form class="signup">
+            <h1 class="signup1">SIGN UP</h1>
+            <br />
+            <br />
+            <br />
+            <br />
+            <input
+              name="username"
+              type="text"
+              placeholder="Username*"
+              class="username"
+            />
+
+            <input
+              name="email"
+              type="text"
+              placeholder="Email*"
+              class="username"
+            />
+
+            <input
+              name="password"
+              type="password"
+              placeholder="Password*"
+              class="username"
+            />
+
+            <button class="btn">Sign Up</button>
+          </form>
+          <form class="signin">
+            <h1 class="signup1">SIGN IN</h1>
+            <br />
+            <br />
+            <br />
+            <br />
+            <input
+              name="username"
+              type="text"
+              placeholder="Username*"
+              class="username"
+            />
+
+            <input
+              name="password"
+              type="password"
+              placeholder="Password*"
+              class="username"
+            />
+
+            <button class="btn">Get Started</button>
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <a href="">
+              <p class="signup2">Forget Password?</p>
+            </a>
+          </form>
+        </div>
+      </div>
+    </div>
         </div>
     );
 }

@@ -3,15 +3,18 @@
 figure.snip1171 {
   font-family: 'Raleway', Arial, sans-serif;
   position: relative;
-  overflow: hidden;
+
   margin: 10px;
-  min-width: 220px;
+  min-width: 310px;
   max-width: 310px;
   width: 100%;
   background: #000000;
   color: #333;
   text-align: left;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  min-height: 310px;
+  max-height: 300px;
+  margin-top: 2em;
 }
 figure.snip1171 * {
   -webkit-box-sizing: border-box;
@@ -156,6 +159,7 @@ figure.snip1171.hover img {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
-.bt .button{
+.bttn .button{
 	cursor: pointer;
 }
+/* /card */

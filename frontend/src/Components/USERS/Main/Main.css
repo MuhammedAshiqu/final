@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap");
 
- 
 /* @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,200&display=swap');
 .parent{
     font-family: 'Nunito', sans-serif;
@@ -51,8 +50,6 @@
     justify-content: center;
 } */
 
-
-
 /* .card {
     margin: 20px;
     padding: 10px;
@@ -73,105 +70,103 @@
   justify-content: space-evenly;
   height: 700px;
 } */
-.map-items{
+.map-items {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
-.openModalBtn{
-    margin-top: 10px;
-    border-radius: 17px;
-    padding: 7px;
-    outline: none;
-    background: #9AC100;
-    border: none;
-    width: 100px;
-    color: #fff;
-    cursor: pointer;
+.openModalBtn {
+  margin-top: 10px;
+  border-radius: 17px;
+  padding: 7px;
+  outline: none;
+  background: #9ac100;
+  border: none;
+  width: 100px;
+  color: #fff;
+  cursor: pointer;
 }
 .menu {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 15px;
-  }
-  .menu .menuTitle {
-    font-family: cursive;
-    font-size: 60px;
-  }
-  
-  .menuList {
-    width: 70vw;
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    place-items: center;
-  }
-  .Hero{
-    position: relative;
-  
-  }
-  
-  .Hero .hero-img img{
-    inline-size: -webkit-fill-available;
-    height: 88vh;
-    
-  }
-  .Hero .hero-content{
-    position: absolute;
-    bottom: 30%;
-    /* left: 10%; */
-    text-align: left;
-  }
-  .Hero .hero-content .title h1 {
-    color: #fff;
-    line-height: 1.2;
-    font-weight: 100;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 40px;
-    font-family: 'Nunito Sans', sans-serif;
-  }
-  .Hero .hero-content .title p {
-    color: #fff;
-    line-height: 1.6;
-  }
-  
-  /* MENU ITEM STYLING */
-  
-  .menuItem {
-    border-radius: 15px;
-    width: 300px;
-    height: 350px;
-    margin: 20px;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  }
-  .menuItem:hover {
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
-    transition: 0.3s ease-in;
-    cursor: pointer;
-  }
-  
-  .menuItem div {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    width: 100%;
-    height: 200px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  .menuItem h1,
-  .menuItem p {
-    margin-left: 20px;
-  }
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15px;
+}
+.menu .menuTitle {
+  font-family: cursive;
+  font-size: 60px;
+}
 
-  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.menuList {
+  width: 70vw;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+}
+.Hero {
+  position: relative;
+}
+
+.Hero .hero-img img {
+  inline-size: -webkit-fill-available;
+  height: 88vh;
+}
+.Hero .hero-content {
+  position: absolute;
+  bottom: 30%;
+  /* left: 10%; */
+  text-align: left;
+}
+.Hero .hero-content .title h1 {
+  color: #fff;
+  line-height: 1.2;
+  font-weight: 100;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 40px;
+  font-family: "Nunito Sans", sans-serif;
+}
+.Hero .hero-content .title p {
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* MENU ITEM STYLING */
+
+.menuItem {
+  border-radius: 15px;
+  width: 300px;
+  height: 350px;
+  margin: 20px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+.menuItem:hover {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.menuItem div {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.menuItem h1,
+.menuItem p {
+  margin-left: 20px;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
   width: 300px;
@@ -181,7 +176,7 @@
   margin-top: 50px;
   display: flex;
   align-items: center;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -201,7 +196,8 @@
 }
 
 /* Position the front and back side */
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -225,11 +221,11 @@
   justify-content: center;
   flex-direction: column;
 }
-.flip-card-back button{
-width: 120px;
-border-radius: 8px;
+.flip-card-back button {
+  width: 120px;
+  border-radius: 8px;
 }
-.mid {
+/* .mid {
   display: flex;
   width: 100%;
   margin-top: 30px;
@@ -252,30 +248,29 @@ border-radius: 8px;
    border-radius: 20px;
    height: fit-content;
    width: 89%;
-}
-h2{
+} */
+h2 {
   color: darkblue;
 }
-h5{
+h5 {
   color: antiquewhite;
-
 }
-h4{
+h4 {
   align-self: auto;
   margin-right: auto;
 }
-.rightmar{
+.rightmar {
   margin-right: 300px;
 }
-  
-  @media only screen and (max-width: 1300px) {
-    .menuList {
-      grid-template-columns: 1fr 1fr;
-    }
+
+@media only screen and (max-width: 1300px) {
+  .menuList {
+    grid-template-columns: 1fr 1fr;
   }
-  
-  @media only screen and (max-width: 800px) {
-    .menuList {
-      grid-template-columns: 1fr;
-    }
+}
+
+@media only screen and (max-width: 800px) {
+  .menuList {
+    grid-template-columns: 1fr;
   }
+}
