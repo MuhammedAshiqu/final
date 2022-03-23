@@ -58,9 +58,14 @@ function CardS({ i, setres }) {
           <figcaption>
             <h3>{i.Name}</h3>
             <p>upload :{i.CreatedBy}</p>
-            <div className="btn">
-              <button onClick={() => addItem(i._id)}>Add to Cart</button>
-            </div>
+
+            <button onClick={() => addItem(i._id)}>Add to Cart</button>
+            {isLoaged &&
+              <>
+                <Link to={`/chat/${i.CreatedBy}`}> <button >chat</button></Link>
+              </>
+            }
+
           </figcaption>
         </figure>
 

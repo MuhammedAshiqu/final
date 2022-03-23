@@ -41,7 +41,7 @@
   margin-bottom: 25px;
 }
 
-h1 {
+.h1 {
   font-size: 32px;
   font-weight: 700;
   color: #131b23;
@@ -49,7 +49,7 @@ h1 {
   letter-spacing: 0.025em;
 }
 
-h2 {
+.h2 {
   font-size: 18px;
   letter-spacing: 0.01em;
   color: #131b23;
@@ -69,7 +69,7 @@ h2 {
   }
 }
 
-button {
+.button {
   font-family: "Open Sans", sans-serif;
   color: #ffffff;
   background: #4f759b;
@@ -85,7 +85,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.button:hover {
   width: 115px;
   background: #4f759be0;
 }

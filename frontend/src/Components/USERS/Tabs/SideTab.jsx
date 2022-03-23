@@ -16,13 +16,6 @@ const Sidetab = ({ nwUser }) => {
         eventKey="profile"
         title="Profile"
       >
-        {/* <div style={{color:'#000'}} > 
-      <span> <h1>Name:<i>{nwUser&& nwUser.Name}</i></h1></span>
-      <span> <h3>Email:<i>{nwUser&& nwUser.Email}</i></h3></span>
-      <span> <h1>Phone Number:<i>{nwUser&& nwUser.Phone}</i></h1></span>
-      <span> <h1>Address:<i>{nwUser&& nwUser.Address}</i></h1></span>
-        
-      </div> */}
 
         <div>
           <link

@@ -5,39 +5,44 @@ import "./SellerHeader.css";
 function SellerHeader() {
   return (
     <div>
-      <Link to="/seller-viewprod">View products</Link>
-      <Link to="/seller-addprod">Add products</Link>
+
+
       <header>
         <nav>
           <div class="logo">
-            <span>Wercel</span>{" "}
+            <span>Pas_Seller</span>{" "}
           </div>
           <div class="menu">
             <ul>
               <li>
-                <a href="">Templates</a>
+                <Link to="/seller-viewprod">View products</Link>
               </li>
               <li>
-                <a href="">Analytics</a>
+                <Link to="/seller-addprod">Add products</Link>
               </li>
               <li>
-                <a href="">Pricing</a>
+                <Link to="/seller-addshop">Add Shop</Link>
+              </li>
+              <li>
+                <Link to="/seller-shop/:id">Shops</Link>
+              </li>
+              <li>
+                <Link to="/seller-orders">Orders</Link>
               </li>
             </ul>
           </div>
           <div class="login">
             <ul>
+
               <li>
-                <a href="">Contact</a>
+                <div className="button"><Link to="/seller-signin">Sign In</Link></div>
               </li>
+
+
               <li>
-                <a href="">Login</a>
+                <div className="button"><Link to="/seller-signup">Sign Up</Link></div>
               </li>
-              <li>
-                <a id="signup" href="">
-                  Sign Up
-                </a>
-              </li>
+
             </ul>
           </div>
           <input type="checkbox" name="" id="hamburger" />

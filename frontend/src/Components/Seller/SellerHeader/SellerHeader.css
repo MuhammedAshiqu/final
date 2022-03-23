@@ -8,7 +8,7 @@
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
 }
-header {
+.header {
   box-sizing: border-box;
   width: 100%;
   height: 60px;
@@ -49,8 +49,8 @@ nav {
   opacity: 0.6;
   font-size: 14px;
 }
-.login ul li a:hover,
-.menu ul li a:hover {
+.login ul li link:hover,
+.menu ul li link:hover {
   color: black;
   opacity: 1;
 }
@@ -318,4 +318,20 @@ input#hamburger:checked + .toogle label span:before {
     font-weight: 800;
     letter-spacing: -4.7344px;
   }
+}
+.button {
+  padding: 9px 9px;
+  background-color:  rgba(0, 136, 169, 1);
+  /* Needs to be rgba so we can drop the opactiy */
+  border: none;
+  /* removes border */
+  border-radius: 50px;
+  /* makes rounded */
+  cursor: pointer;
+  transition: all 0.3 ease 0s;
+}
+
+.button:hover {
+  background-color:  rgba(25, 43, 48, 0.8);
+/* same colour as above but alpha value (last value)makes it darker  */
 }

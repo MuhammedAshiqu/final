@@ -1,4 +1,4 @@
-/* .body {
+.body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom right, #e3f0ff, #fafcff);
@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-} */
+}
 .container {
     width: 90%;
     height: 85%;

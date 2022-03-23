@@ -76,17 +76,6 @@
   flex-wrap: wrap;
 }
 
-.openModalBtn {
-  margin-top: 10px;
-  border-radius: 17px;
-  padding: 7px;
-  outline: none;
-  background: #9ac100;
-  border: none;
-  width: 100px;
-  color: #fff;
-  cursor: pointer;
-}
 .menu {
   width: 100%;
   height: auto;
@@ -221,10 +210,10 @@
   justify-content: center;
   flex-direction: column;
 }
-.flip-card-back button {
+/* .flip-card-back button {
   width: 120px;
   border-radius: 8px;
-}
+} */
 /* .mid {
   display: flex;
   width: 100%;
