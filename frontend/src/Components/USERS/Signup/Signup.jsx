@@ -11,7 +11,10 @@ import { useContext, useEffect } from 'react';
 import { DataContext } from '../../../Context/Context';
 
 function Signup() {
-    const { Users, AdminTrue, Cartcount } = useContext(DataContext);
+    const { Users, AdminTrue, Cartcount, IsLoaged } = useContext(DataContext);
+
+    const [isLoaged, setisLoaged] = IsLoaged;
+    const LoginSuccess = () => toast('Login Success');
 
     const [adminTrue, setadminTrue] = AdminTrue;
 
@@ -36,9 +39,15 @@ function Signup() {
         notify();
         axios.post('http://localhost:8008/signup', input).then((result) => {
             console.log(result);
-            result.data.message === 'set'
-                ? history.push('/Login')
-                : seterror('All fields required');
+            if (result.data.message === 'set') {
+
+                localStorage.setItem('user', input.Email);
+                LoginSuccess();
+                setisLoaged(true);
+                history.push('/');
+            } else {
+                seterror('All fields required');
+            }
         });
     };
 
