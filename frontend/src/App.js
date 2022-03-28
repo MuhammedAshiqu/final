@@ -66,7 +66,7 @@ function App() {
         {adminTrue ? <Adminheader /> : <Navbar1></Navbar1>}
 
         {/* {!sellerTrue ? <Navbar1></Navbar1> : <SellerH/> } */}
-        <Navbar2></Navbar2>
+        {/* <Navbar2></Navbar2> */}
 
         <Route path="/admin" component={Admin} />
         <Route path="/adminhome" component={Change} />

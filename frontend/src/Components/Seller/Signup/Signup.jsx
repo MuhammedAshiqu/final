@@ -6,7 +6,7 @@ import { Link, useHistory } from 'react-router-dom';
 import logo1 from './../../../signup2.jpg';
 import { ToastContainer, toast } from 'react-toastify';
 import img1 from '../../../backq.jpg';
-// import './Signup.scss'
+import './Signup.scss'
 import { useContext, useEffect } from 'react';
 import { DataContext } from '../../../Context/Context';
 
@@ -51,57 +51,108 @@ function SlrSignup() {
     }, []);
 
     return (
-        <div className='signup'>
-            <div className='signup-wrapper'>
-                <h3>Welcome</h3>
-                <p>TO THE Sellers</p>
-            </div>
-            <form className='signup-form' onSubmit={handleClick}>
-                <h3> {error && 'All fields Required'} </h3>
+        // <div className='signup'>
+        //     <div className='signup-wrapper'>
+        //         <h3>Welcome</h3>
+        //         <p>TO THE Sellers</p>
+        //     </div>
+        //     <form className='signup-form' onSubmit={handleClick}>
+        //         <h3> {error && 'All fields Required'} </h3>
 
-                <input
-                    type='text'
-                    name='Name'
-                    value={input.Name}
-                    onChange={handleChane}
-                    placeholder='sellername'
-                />
-                <input
-                    type='text'
-                    name='Email'
-                    value={input.Email}
-                    onChange={handleChane}
-                    placeholder='email'
-                />
-                <input
-                    type='text'
-                    name='Address'
-                    value={input.Address}
-                    onChange={handleChane}
-                    placeholder='address'
-                />
-                <input
-                    type='number'
-                    name='Phone'
-                    value={input.Phone}
-                    onChange={handleChane}
-                    placeholder='phone number'
-                />
-                <input
-                    type='password'
-                    name='Password'
-                    value={input.Password}
-                    onChange={handleChane}
-                    placeholder='password'
-                />
+        //         <input
+        //             type='text'
+        //             name='Name'
+        //             value={input.Name}
+        //             onChange={handleChane}
+        //             placeholder='sellername'
+        //         />
+        //         <input
+        //             type='text'
+        //             name='Email'
+        //             value={input.Email}
+        //             onChange={handleChane}
+        //             placeholder='email'
+        //         />
+        //         <input
+        //             type='text'
+        //             name='Address'
+        //             value={input.Address}
+        //             onChange={handleChane}
+        //             placeholder='address'
+        //         />
+        //         <input
+        //             type='number'
+        //             name='Phone'
+        //             value={input.Phone}
+        //             onChange={handleChane}
+        //             placeholder='phone number'
+        //         />
+        //         <input
+        //             type='password'
+        //             name='Password'
+        //             value={input.Password}
+        //             onChange={handleChane}
+        //             placeholder='password'
+        //         />
 
-                <button>Signup</button>
-                <Link to='/Login'>
-                    {' '}
-                    <Button>Already have an account ?</Button>{' '}
-                </Link>
-            </form>
-        </div>
+        //         <button>Signup</button>
+        //         <Link to='/Login'>
+        //             {' '}
+        //             <Button>Already have an account ?</Button>{' '}
+        //         </Link>
+        //     </form>
+        // </div>
+
+        <div className='body'> <div class="container">
+        <h1 >Sign Up</h1>
+        <form  onClick={handleClick}>
+        <h5> {error && 'All fields Required'} </h5>
+        <input
+                   type='text'
+                   name='Name'
+                   value={input.Name}
+                   onChange={handleChane}
+                   placeholder='sellername'
+               />
+               <input
+                   type='text'
+                   name='Email'
+                   value={input.Email}
+                   onChange={handleChane}
+                   placeholder='email'
+               />
+               <input
+                   type='text'
+                   name='Address'
+                   value={input.Address}
+                   onChange={handleChane}
+                   placeholder='address'
+               />
+               <input
+                   type='number'
+                   name='Phone'
+                   value={input.Phone}
+                   onChange={handleChane}
+                   placeholder='phone number'
+               />
+               <input
+                   type='password'
+                   name='Password'
+                   value={input.Password}
+                   onChange={handleChane}
+                   placeholder='password'
+               />
+          <div class="btns">
+        
+          <Button>Signup</Button>
+              <Link to='/Login'>
+                  {' '}
+                  <Button>Already have an account ?</Button>{' '}
+              </Link>
+          </div>
+  
+        </form>
+      </div></div>
     );
 }
 

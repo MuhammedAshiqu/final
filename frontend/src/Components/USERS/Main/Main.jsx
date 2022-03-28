@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { DataContext } from "../../../Context/Context";
 import "./Main.css";
 import { Card, Carousel, Dropdown, DropdownButton } from "react-bootstrap";
-import Hero from "../../../selling_istock.jpg";
+
 import CardS from "../Card/Card";
 
 function Main() {
@@ -44,7 +44,7 @@ function Main() {
     <div className="parent">
       <div className="Hero">
         <div className="hero-img">
-          <img src={Hero} alt="" />
+          <img src="https://emarsys.com/app/uploads/fly-images/83576/GettyImages-1198383207-1110x9999.jpg" alt="" />
         </div>
         <div className="hero-content">
           <div className="title">
@@ -64,7 +64,8 @@ function Main() {
                 or services!
               </b>{" "}
             </h5>
-            <p>Bag Quality Products From Most Trusted Sellers</p>
+            <p>Bag Quality Products From Most Trusted Sellers</p><br />
+            <button className="shopbtn"><Link to="/productview"><div className="btntxt">Shop Now</div></Link></button>
           </div>
         </div>
       </div>

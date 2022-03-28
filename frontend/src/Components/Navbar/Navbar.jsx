@@ -69,11 +69,12 @@ function Navbar () {
             <ul>
                 <Link to='/'><li>Home</li></Link>
                 <Link to='/productview'><li>Products</li></Link>
+                <Link to='/viewService'><li>Services</li></Link>
                {isLoaged &&
                 <>
                 <Link to='/messages'><li>Chat</li></Link>
                 <Link to='/profile'> <li>Profile</li></Link>
-               <div style={{ marginTop: '15px' }} className="cartIcon">
+               <div style={{ marginTop: '2px' }} className="cartIcon">
                     <Link style={{ textDecoration: 'none', color: '#fff' }} to='/cart' >  <h2 > <BsCart4 /> <span style={{ fontSize: '30px' }} >{ isLoaged && cartCount} </span>  </h2> </Link>
                 </div>
                 </>

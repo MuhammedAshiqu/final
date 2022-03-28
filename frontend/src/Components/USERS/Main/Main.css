@@ -83,11 +83,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 15px;
+  margin-top: 50px;
 }
 .menu .menuTitle {
   font-family: cursive;
   font-size: 60px;
+  margin-left: 20px;
 }
 
 .menuList {
@@ -103,12 +104,14 @@
 
 .Hero .hero-img img {
   inline-size: -webkit-fill-available;
-  height: 88vh;
+  height: 90vh;
 }
 .Hero .hero-content {
   position: absolute;
   bottom: 30%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
   /* left: 10%; */
+  margin-left: 40px;
   text-align: left;
 }
 .Hero .hero-content .title h1 {
@@ -116,13 +119,22 @@
   line-height: 1.2;
   font-weight: 100;
   margin-left: auto;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin-right: auto;
   font-size: 40px;
-  font-family: "Nunito Sans", sans-serif;
+ 
+  margin-left: 40px;
+}
+.Hero .hero-content .title h5{
+  text-align: center;
+  color: white;
+  font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .Hero .hero-content .title p {
+  font-family: cursive;
   color: #fff;
-  line-height: 1.6;
+  line-height: 3.6;
+  margin-left: 40px;
 }
 
 /* MENU ITEM STYLING */
@@ -162,7 +174,7 @@
   height: 300px;
   border: 1px solid #121619;
   margin-bottom: 50px;
-  margin-top: 50px;
+  margin-top: 40px;
   display: flex;
   align-items: center;
   font-family: "Nunito Sans", sans-serif;
@@ -239,10 +251,12 @@
    width: 89%;
 } */
 h2 {
-  color: darkblue;
+  text-align: center;
+  color: black;
+  font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 h5 {
-  color: antiquewhite;
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 h4 {
   align-self: auto;
@@ -262,4 +276,17 @@ h4 {
   .menuList {
     grid-template-columns: 1fr;
   }
+}
+.shopbtn{
+  padding: 8px;
+  margin-left: 130px;
+  border-radius: 20px;
+  border: 0;
+  background-color:red;
+}
+.btntxt{
+text-align: center;
+color: white;
+font-weight: 500px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

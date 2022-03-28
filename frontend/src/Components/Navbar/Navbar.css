@@ -23,10 +23,11 @@
 }
 
 .navbar-nav img {
-    width: 40px;
-    height: 40px;
+    margin-top: 2px;
+    width: 37px;
+    height: 35px;
     object-fit: cover;
-    margin-left: 1.5em;
+    margin-left: .5em;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -38,6 +39,7 @@
     background-color:#f0be2a;
     padding: 10px;
     border-radius: 0.5em;
+    z-index: 1;
 }
 
 .navbar-nav-dropdown button {
