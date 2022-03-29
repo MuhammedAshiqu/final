@@ -105,7 +105,7 @@ function Signup() {
             </form> */}
 
             {/* try */}
-            <div className="body">
+            <div className="signup_body">
                 <div className="signupSection">
                     <div class="info">
                         <h2>Welcome</h2>

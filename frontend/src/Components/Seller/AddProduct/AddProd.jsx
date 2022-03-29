@@ -5,7 +5,8 @@ import { Modal, Button } from "react-bootstrap";
 import { Link } from "react-dom";
 import { DataContext } from "../../../Context/Context";
 import { useHistory } from "react-router-dom";
-import "./AddProd.css";
+import "./AddProd.scss";
+import SellerHeader from '../SellerHeader/SellerHeader'
 
 function AddProd() {
   const { Users, AdminTrue, Cartcount, seller } = useContext(DataContext);
@@ -52,12 +53,12 @@ function AddProd() {
           res.data.vibe && alert("successfuly added");
           setimage();
           setisloading(false);
-          history.push("/");
+          history.push("/seller");
         }));
   };
   const handleClose = () => {
     setShow(false);
-    history.push("/");
+    history.push("/seller");
   };
   const handleShow = () => {
     setShow(true);
@@ -137,16 +138,17 @@ function AddProd() {
           {/* <Button variant="primary" onClick={handleClose}>
             Save Changes
           </Button> */}
-        {/* </Modal.Footer>
-      </Modal> */} 
+      {/* </Modal.Footer>
+      </Modal> */}
 
       {/* try */}
-
+      {/* <SellerHeader/> */}
       <div class="container">
-        <form id="contact" method="post" onClick={handleAdd} >
+        <form method='POST' id="contact" onSubmit={handleAdd} >
           <h3>ADD PRODUCTS</h3>
 
           <input
+            type="text"
             onChange={handleChange}
             name="name"
             placeholder="Product name"

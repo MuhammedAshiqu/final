@@ -119,8 +119,8 @@ function About() {
 
         <div>
             {/* try */}
-            <div className="body">
-                <div className="signupSection">
+            <div className="login_body">
+                <div className="login_signupSection">
 
                     <form class="signupForm" onSubmit={handleClick}>
                         {error ? <h5 style={{ color: 'red' }}>{error}</h5> : ''}

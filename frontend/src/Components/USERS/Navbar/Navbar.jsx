@@ -21,11 +21,11 @@ function Navbar() {
     // const [isLoaged,setisLoaged]=IsLoaged
 
     const { Users, Cartcount, AdminTrue, IsLoaged } = useContext(DataContext)
+    const [isLoaged, setisLoaged] = IsLoaged
     const [adminTrue, setadminTrue] = AdminTrue
     const history = useHistory()
     const [user, setuser] = Users
     const [cartCount, setcartCount] = Cartcount
-    const [isLoaged, setisLoaged] = IsLoaged
     const [refresh, setrefresh] = useState(false)
     const [currentUser, setcurrentUser] = useState()
     const notify = () => toast("successfuly Logout");

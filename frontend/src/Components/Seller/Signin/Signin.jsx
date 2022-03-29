@@ -123,7 +123,7 @@ function Signin() {
     // try
     <div className='body'> <div class="container">
       <h1 >Signin</h1>
-      <form  onClick={handleClick}>
+      <form  >
         {error ? <h2 style={{ color: 'red' }}>{error}</h2> : ''}
         <h4>{message}</h4>
         <input onChange={handleChane}

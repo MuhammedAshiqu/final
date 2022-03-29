@@ -34,49 +34,7 @@ function ManageProduct() {
 
   return (
     <div>
-      {/* <table class="styled-table">
-        <thead>
-          <tr>
-            <th>Index</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Category</th>
-            <th>Description</th>
-            <th>Product</th>
-          </tr>
-        </thead>
-        <tbody>
-          {state.map((i, index) => {
-            return (
-              <tr style={{ color: "#000" }}>
-                <td>{index + 1}</td>
-                <td>{i.Name}</td>
-                <td>{i.Price}</td>
-                <td>{i.Category}</td>
-                <td>{i.Description}</td>
-                <td>
-                  <img
-                    src={i.url}
-                    alt=""
-                    style={{ width: "50px", height: "50px" }}
-                  />
-                </td>
-                <td>
-                  <Link to={`/editproduct/${i._id}`}>Edit</Link>
-                </td>
-                <td>
-                  <button
-                    onClick={() => deleteItem(i._id)}
-                    className="btn btn-danger"
-                  >
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table> */}
+      
 
       {/* try */}
       <table class="styled-table">

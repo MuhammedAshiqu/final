@@ -41,6 +41,7 @@ nav {
 .login ul,
 .menu ul {
   display: flex;
+  z-index: 1;
 }
 .login ul li a,
 .menu ul li a {
@@ -56,7 +57,7 @@ nav {
 }
 .login ul li a#signup {
   height: 32px;
-  padding: 6px 12px;
+  /* padding: 6px 12px; */
   min-width: auto;
   color: white;
   background-color: #000;
@@ -182,10 +183,11 @@ main .info {
 .toogle {
   width: calc(var(--space) * 3.3);
   height: calc(var(--height) + (var(--space) * 2));
-  /* background-color: var(--color); */
-  /* border:calc(var(--height) / 3) solid var(--color);
-	border-radius: calc(var(--height) / 3); */
+  background-color: var(--color); 
+   border:calc(var(--height) / 3) solid var(--color);
+	border-radius: calc(var(--height) / 3); 
   display: none;
+  
 }
 
 .toogle label {
@@ -257,6 +259,7 @@ input#hamburger:checked + .toogle label span:before {
 @media screen and (max-width: 768px) {
   header nav .menu {
     display: none;
+    z-index: 1;
   }
   .toogle {
     display: block;
@@ -319,19 +322,19 @@ input#hamburger:checked + .toogle label span:before {
     letter-spacing: -4.7344px;
   }
 }
-.button {
-  padding: 9px 9px;
+.signup_button {
+  padding: 6px 6px 6px 6px;
   background-color:  rgba(0, 136, 169, 1);
   /* Needs to be rgba so we can drop the opactiy */
   border: none;
   /* removes border */
-  border-radius: 50px;
+  border-radius: 20px;
   /* makes rounded */
   cursor: pointer;
   transition: all 0.3 ease 0s;
 }
 
-.button:hover {
-  background-color:  rgba(25, 43, 48, 0.8);
+.signup_button:hover {
+  background-color:  rgba(36, 77, 88, 0.8);
 /* same colour as above but alpha value (last value)makes it darker  */
 }

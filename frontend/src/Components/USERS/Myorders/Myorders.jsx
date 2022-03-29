@@ -29,10 +29,13 @@ function Myorders() {
           </tr>
         </thead>
         <tbody>
-          <h1>{orders && orders.length}</h1>
+          <tr >
+            <td><h3>Total orders:{orders && orders.length}</h3></td>
+          </tr>
           {orders &&
             orders.map((i, index) => (
               <tr style={{ color: "#000" }}>
+                
                 <td>{index + 1}</td>
                 <td>{i.orderObject.date}</td>
                 <td>{i.orderObject.paymentMethod}</td>

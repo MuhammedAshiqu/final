@@ -50,7 +50,7 @@ module.exports = {
 
     addShop: async (shop, seller, callback) => {
         return new Promise((resolve, reject) => {
-            // console.log("my",user);
+            // console.log("my",seller);
             // console.log(product);
             //product.input.price = parseInt(product.input.price);
             const shops = {
@@ -69,7 +69,7 @@ module.exports = {
                 .insertOne(shops)
                 .then((data) => {
                     console.log(data);
-                    resolve(data.ops[0]._id);
+                    resolve(data.ops[0].seller._id);
                 });
         });
     },
@@ -156,14 +156,15 @@ module.exports = {
         });
     },
 
-    getAllOrders: (sellerId) => {
+    getSellerOrder: (sellerId) => {
         return new Promise(async (resolve, reject) => {
             let orders = await db
                 .get()
                 .collection(collections.ORDER_COLLECTION)
-                .find({ _id: sellerId })
+                .find({ "orderObject.seller._id": objectId(sellerId) })
                 .toArray();
             resolve(orders);
         });
     },
+
 };

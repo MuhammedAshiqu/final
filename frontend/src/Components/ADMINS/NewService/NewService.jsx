@@ -3,7 +3,7 @@ import { Modal, Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
-import "./NewService.css";
+import "./NewService.scss";
 
 function NewService() {
   const history = useHistory();
@@ -86,7 +86,7 @@ function NewService() {
       {/* try */}
 
       <div class="container">  
-  <form id="contact" method="post" onClick={handleSubmit}>
+  <form id="contact" method="post" >
     <h3>Add New Service</h3>
     
   
