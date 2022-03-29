@@ -32,18 +32,21 @@ function ShowallProds() {
     }, [ref]);
 
     return (
-        <div className='main-i'>
-            <Table striped bordered hover variant='dark'>
-                <thead>
-                    <tr>
-                        <th>No.</th>
+        
+
+
+
+        <table class="styled-table">
+    <thead>
+        <tr>
+        <th>No.</th>
                         <th>Name</th>
                         <th>mail id</th>
                         <th>Option</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {allprods.map((i, index) => (
+        </tr>
+    </thead>
+    <tbody>
+    {allprods.map((i, index) => (
                         <tr>
                             <td>{index + 1}</td>
                             <td>{i.Name}</td>
@@ -60,8 +63,8 @@ function ShowallProds() {
                         </tr>
                     ))}
                 </tbody>
-            </Table>
-        </div>
+    
+</table>
     );
 }
 

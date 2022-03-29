@@ -17,30 +17,27 @@ function Shoporders() {
     }, []);
 
     return (
-        <div>
-            <div className='main-i'>
-                <table class='table table-hover'>
-                    <thead>
-                        <tr>
-                            <th>Order id</th>
-                            <th>Mode of Payment</th>
-                            <th>Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {data.map((i, index) => (
-                            <tr>
-                                <td>{i.orderObject.date}</td>
-                                <td>{i.orderObject.paymentMethod}</td>
-                                <td>{i.orderObject.totalAmount}</td>
 
-                                {/* <td><button onClick={()=>deleteUser(i._id)}  className='btn btn-danger' >Delete</button></td> */}
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
-        </div>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Order id</th>
+                    <th>Mode of Payment</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {data.map((i, index) => (
+                    <tr>
+                        <td>{i.orderObject.date}</td>
+                        <td>{i.orderObject.paymentMethod}</td>
+                        <td>{i.orderObject.totalAmount}</td>
+
+                        {/* <td><button onClick={()=>deleteUser(i._id)}  className='btn btn-danger' >Delete</button></td> */}
+                    </tr>
+                ))}
+            </tbody>
+        </table>
     );
 }
 

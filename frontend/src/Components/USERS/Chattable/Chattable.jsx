@@ -14,11 +14,6 @@ function ChatTable() {
       console.log(result.data)
       setarr(result.data)
 
-
-
-
-
-
     })
   }
 
@@ -35,16 +30,14 @@ function ChatTable() {
     arr.map((i) => {
 
       return (<>
-
         <table class="styled-table">
-
           <tbody>
             <tr>
-              message from <th><Link to={`/chat/${i.sender}`}>{i.sender}</Link></th>
+              <td><thead>Message From</thead></td>
+              <td><Link to={`/chat/${i.sender}`}>{i.sender}</Link></td>
             </tr>
           </tbody>
         </table>
-
       </>
       )
     })

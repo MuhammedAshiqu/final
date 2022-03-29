@@ -29,6 +29,7 @@ import Navbar2 from "./Components/Navbar2/Navbar2";
 import ManageProduct from "./Components/USERS/ManagrProduct/ManageProduct";
 import NewAdd1 from "./Components/USERS/NewAdd1/NewAdd1";
 import Update from "./Components/USERS/NewAdd1/Update";
+import ShopView from "./Components/USERS/ShopView/ShopView";
 
 import SlrSignup from "./Components/Seller/Signup/Signup";
 import Signin from "./Components/Seller/Signin/Signin";
@@ -95,6 +96,7 @@ function App() {
         <Route path="/manageproduct" component={ManageProduct} />
         <Route path="/editproduct/:id" component={NewAdd1} />
         <Route path="/add-product" component={NewAdd} />
+        <Route path="/shopview" component={ShopView}/>
 
         {/* <Route path='/*' component={Cart} /> */}
 

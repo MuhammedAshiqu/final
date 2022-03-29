@@ -89,6 +89,7 @@ function Navbar () {
                          <div className='navbar-nav-dropdown'>
                          <button>{isLoaged ? <h5 onClick={logout}> Logout </h5> : <Link style={{ textDecoration: 'none' }} to='/Login' > <h5 onClick={reload}  >Login</h5></Link>}</button>
                         <Link to='/signup'><button>Signup</button></Link>
+                        <Link to='/seller'><button>Sellers</button></Link>
                         <Link to='/admin'><button>Admin panel</button></Link>
                       </div>
                      )}

@@ -102,12 +102,6 @@ function Chat() {
                 </h3>
               </div>
             </li>
-
-
-
-
-
-
             <li>
               <img
                 src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_08.jpg"
@@ -203,12 +197,7 @@ function Chat() {
                 }
               })
             }
-
-
-
-
-
-          </ul>
+    </ul>
           <footer>
 
             <textarea onChange={(e) => setmessage(e.target.value)} placeholder="Type your message" defaultValue={""} />
@@ -225,8 +214,12 @@ function Chat() {
         </main>
       </div>
 
-      
+
     </div>
+    // try
+
+
+   
 
   )
 }
