@@ -119,13 +119,14 @@ router.post('/addproduct', (req, res) => {
     });
 });
 
-router.get('/all-prod/:id', (req, res) => {
-    if (req.params?.id) {
-        sellerHelper.getAllProducts(req.params.id).then((response) => {
+router.get('/all-prod/:email', (req, res) => {
+    console.log(req.params?.email);
+    if (req.params?.email) {
+        sellerHelper.getAllProducts(req.params.email).then((response) => {
             res.json({ response });
         });
     } else {
-        res.json({ error: 'Id not provided' });
+        res.json({ error: 'email not provided' });
     }
 });
 

@@ -59,8 +59,8 @@ module.exports = {
                 Price: shop.input.price,
                 Description: shop.input.description,
                 url: shop.url,
-                CreatedBy: seller.sellerId,
-                SellerId: seller._id,
+                CreatedBy: seller?.sellerId,
+                SellerId: seller?._id,
                 reviews: [],
             };
 
@@ -69,7 +69,7 @@ module.exports = {
                 .insertOne(shops)
                 .then((data) => {
                     console.log(data);
-                    resolve(data.ops[0].seller._id);
+                    resolve(data.ops[0].seller?._id);
                 });
         });
     },
@@ -100,14 +100,15 @@ module.exports = {
     },
 
     // view and delete prod
-    getAllProducts: (id) => {
+    getAllProducts: (email) => {
         return new Promise(async (resolve, reject) => {
             let products = await db
                 .get()
                 .collection(collections.PRODUCTS_COLLECTION)
-                .find({ CreatedBy: id })
+                .find({ CreatedBy: email })
                 .toArray();
             resolve(products);
+            console.log(products)
         });
     },
 
@@ -161,10 +162,9 @@ module.exports = {
             let orders = await db
                 .get()
                 .collection(collections.ORDER_COLLECTION)
-                .find({ "orderObject.seller._id": objectId(sellerId) })
+                .find({ 'orderObject.seller._id': objectId(sellerId) })
                 .toArray();
             resolve(orders);
         });
     },
-
 };
