@@ -21,6 +21,16 @@ module.exports = {
       resolve(products);
     });
   },
+  getAllShops: (email) => {
+    return new Promise(async (resolve, reject) => {
+      let products = await db
+        .get()
+        .collection(collections.SHOPS_COLLECTION)
+        .find()
+        .toArray();
+      resolve(products);
+    });
+  },
 
 
   getSignedUserProducts:(email)=>{
