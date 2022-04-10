@@ -2,7 +2,7 @@ import React from 'react'
 import './ShopView.css'
 import {Link} from "react-router-dom"
 
-function ShopView({setres,i}) {
+function ShopView() {
 	return (
 		<div className="shopview_body">
 			<Link to="/productview">
@@ -10,13 +10,13 @@ function ShopView({setres,i}) {
 				<div class="course">
 					<div class="course-preview">
 						{/* <h6>Course</h6> */}
-						<h2>{i.Category}</h2><br />
-						<span>{ i.Location}</span>
+						<h2>Category</h2><br />
+						<span> Location</span>
 					</div>
 					<div class="course-info">
 						
 						<h6>1234567893</h6>
-						<h2>{i.Name}</h2><br /><br /><br />
+						<h2>Shop Name</h2><br /><br /><br />
 						<Link to="/productview"><button class="btttn">View Products</button></Link>
 					</div>
 				</div>

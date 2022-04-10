@@ -29,14 +29,17 @@ router.get("/",verifySignedIn, async function (req, res, next) {
     })
     
   }
+
+
   userHelper.getAllShops().then((shop)=>{
     res.json({admin:false,shop,user})
   })
   // userHelper.getAllProducts().then((products) => {
 
-  //   console.log("pro",products);
-  //   res.json({admin:false,products,user,cartCount})
-  // });
+
+    
+    res.json({admin:false,products,user,cartCount})
+  });
 });
 
 router.get("/signup", function (req, res) {
