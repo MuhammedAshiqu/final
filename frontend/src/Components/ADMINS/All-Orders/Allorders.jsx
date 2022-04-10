@@ -10,11 +10,9 @@ function Allorders() {
       setdata(response.data.orders);
     });
   };
-  
   useEffect(() => {
     getAllorders();
   }, []);
-
   return (
     <div>
       <div className="table-container">

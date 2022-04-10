@@ -10,11 +10,9 @@ function ShowallProds() {
 
     const getAllProds = () => {
         console.log('first');
-        axios
-            .get(`http://localhost:8008/seller/all-prod/${seller?.Email}`)
-            .then((result) => {
-                setallprods(result.data.response);
-            });
+        axios.get(`http://localhost:8008/seller/all-prod/${seller}`).then((result) => {
+            setallprods(result.data.response);
+        });
     };
 
     const deleteProd = (id) => {
@@ -34,34 +32,39 @@ function ShowallProds() {
     }, [ref]);
 
     return (
-        <table class='styled-table'>
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Name</th>
-                    <th>mail id</th>
-                    <th>Option</th>
-                </tr>
-            </thead>
-            <tbody>
-                {allprods.map((i, index) => (
-                    <tr>
-                        <td>{index + 1}</td>
-                        <td>{i.Name}</td>
-                        <td>{i.Category}</td>
+        
 
-                        <td>
-                            <button
-                                onClick={() => deleteProd(i._id)}
-                                className='btn btn-danger'
-                            >
-                                Delete
-                            </button>
-                        </td>
-                    </tr>
-                ))}
-            </tbody>
-        </table>
+
+
+        <table class="styled-table">
+    <thead>
+        <tr>
+        <th>No.</th>
+                        <th>Name</th>
+                        <th>mail id</th>
+                        <th>Option</th>
+        </tr>
+    </thead>
+    <tbody>
+    {allprods.map((i, index) => (
+                        <tr>
+                            <td>{index + 1}</td>
+                            <td>{i.Name}</td>
+                            <td>{i.Category}</td>
+
+                            <td>
+                                <button
+                                    onClick={() => deleteProd(i._id)}
+                                    className='btn btn-danger'
+                                >
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+    
+</table>
     );
 }
 

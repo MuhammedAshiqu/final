@@ -25,14 +25,10 @@ function AddProd() {
     price: "",
     description: "",
   });
-
   const handleChange = (e) => {
     setinput({ ...input, [e.target.name]: e.target.value });
   };
-
-  const handleAdd = async (e) => {
-    e.preventDefault();
-
+  const handleAdd = async () => {
     setisloading(true);
     console.log("handleAdd Working");
     const formdata = new FormData();
@@ -60,12 +56,10 @@ function AddProd() {
           history.push("/seller");
         }));
   };
-
   const handleClose = () => {
     setShow(false);
     history.push("/seller");
   };
-  
   const handleShow = () => {
     setShow(true);
   };
