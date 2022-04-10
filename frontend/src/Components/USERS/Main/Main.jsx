@@ -29,22 +29,16 @@ function Main() {
   const getData = () => {
     console.log("getdata working");
     axios.get(process.env.REACT_APP_API_URL).then((response) => {
-      console.log("res data",response.data);
+      console.log(response.data);
       setcartCount(response.data.cartCount);
-      setstate(response.data.shop);
+      setstate(response.data.products);
     });
   };
-  const data=()=>{
-    axios.get("http://localhost:8008/",).then((res)=>{
-      console.log("new  q ",res);
-    })
-  }
 
   useEffect(() => {
     setadminTrue(false);
     getData();
     getcurrentUser();
-    data();
   }, [res]);
 
   return (
@@ -100,12 +94,7 @@ function Main() {
       </div> */}
 
 
-     {
-     state.map((i)=>{
-
-       return <ShopView setres={setres} i={i}/>
-     })
-      }
+      <ShopView/>
 
 
       <div
