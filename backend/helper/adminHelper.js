@@ -162,12 +162,25 @@ module.exports = {
 
   getAllSellers: () => {
     return new Promise(async (resolve, reject) => {
+      console.log("all sellers");
       let sellers = await db
         .get()
         .collection(collections.SELLERS_COLLECTION)
         .find()
         .toArray();
       resolve(sellers);
+    });
+  },
+
+  getAllShops: () => {
+    return new Promise(async (resolve, reject) => {
+      console.log("all shops");
+      let shops = await db
+        .get()
+        .collection(collections.SHOPS_COLLECTION)
+        .find()
+        .toArray();
+      resolve(shops);
     });
   },
 

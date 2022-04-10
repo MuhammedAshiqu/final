@@ -24,7 +24,8 @@ function Adminheader() {
                   {/* <Link to='/admins' ><button>-</button></Link>  */}
                    <Link to='/adminhome' > <button  >Product</button> </Link>  
                    <Link to='/getallusers' > <button>User</button></Link> 
-                   <Link to='/getallsellers' > <button>Seller</button></Link> 
+                   <Link to='/getallsellers' > <button>Seller</button></Link>
+                   <Link to='/getallshops' > <button>Shop</button></Link> 
                    <Link to='/allorders' > <button>Orders</button></Link> 
                    <Link to='/service' ><button>addService</button></Link>
                    <Link to='/admin' ><button onClick={logout}>LOGOUT</button></Link>

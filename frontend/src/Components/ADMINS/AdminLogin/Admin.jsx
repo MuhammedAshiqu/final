@@ -19,7 +19,8 @@ function Admin() {
         setmessage('')
         setinput({ ...input, [e.target.name]: e.target.value })
     }
-    const handleClick = () => {
+    const handleClick = (e) => {
+        e.preventDefault()
         axios.post('http://localhost:8008/admin/signin', input).then((res) => {
             console.log(res);
             setadminTrue(res.data.admin)
@@ -74,7 +75,7 @@ function Admin() {
                         <h2 className='yyy'>{message}</h2>
                         <div class="col-lg-12 login-form">
                             <div class="col-lg-12 login-form">
-                                <form>
+                                <form onSubmit={handleClick}>
                                     <div class="form-group">
                                         <label class="form-control-label">USERNAME</label>
                                         <input type="text" placeholder='email' name='Email' onChange={handleChange} />
@@ -88,7 +89,7 @@ function Admin() {
 
                                         </div>
                                         <div class="col-lg-6 login-btm login-button">
-                                            <button type="submit" class="btn btn-outline-primary" onClick={handleClick} >LOGIN</button>
+                                            <button type="submit" class="btn btn-outline-primary"  >LOGIN</button>
                                         </div>
                                     </div>
                                 </form>

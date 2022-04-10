@@ -41,6 +41,7 @@ import Shoporders from "./Components/Seller/ViewShopOrders/ShopOrder";
 // import SellerH from './Components/Seller/SellerH/SellerH';
 import SellerHeader from "./Components/Seller/SellerHeader/SellerHeader";
 import Showallsellers from "./Components/ADMINS/ShowAllSellers/Showallsellers";
+import Showallshops from "./Components/ADMINS/Showallshops/Showallshops";
 
 function App() {
   const { Users, Cartcount, AdminTrue, IsLoaged, sellerTrue } =
@@ -76,7 +77,7 @@ function App() {
         <Route path="/allorders" component={Allorders} />
         {/* <Route path='/admins' component={AdminHome} /> */}
         <Route path="/service" component={NewService}></Route>
-
+        <Route path="/getallshops" component={Showallshops}></Route>
         {/* Users Section */}
         <Route exact path="/">
           {" "}

@@ -45,6 +45,7 @@ function Change() {
       <table class="styled-table">
         <thead>
           <tr>
+            <th>No</th>
             <th>Name</th>
             <th>Price</th>
             <th>Uploaded</th>
@@ -52,11 +53,12 @@ function Change() {
           </tr>
         </thead>
         <tbody>
-          {items.map((i) => (
-            <tr>
+          {items.map((i,index) => (
+            <tr key={index}>
+              <td>{index+1}</td>
               <td>{i.Name}</td>
               <td>{i.Price}</td>
-              <td>{i.CreatedBy}</td>
+              <td>{i.CreatedBy?.Name}</td>
               <td>
                 <button
                   onClick={() => deleteItem(i._id)}

@@ -46,7 +46,7 @@ function AddProd() {
         .post("http://localhost:8008/seller/addproduct", {
           input: input,
           url: url,
-          sellerId: seller,
+          sellerId: seller?.Email,
         })
         .then((res) => {
           console.log(res);

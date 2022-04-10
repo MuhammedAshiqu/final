@@ -164,9 +164,18 @@ router.get("/remove-all-users", verifySignedIn, function (req, res) {
 });
 
 router.get("/all-sellers",  function (req, res) {
+  console.log("seller");
   let administator = req.session.admin;
-  adminHelper.getAllSelles().then((sellers) => {
-    res.json( { admin: true, administator, sellers });
+  adminHelper.getAllSellers().then((sellers) => {
+   res.json( { admin: true, administator, sellers });
+  });
+});
+
+router.get("/all-shops",  function (req, res) {
+  console.log("shop");
+  let administator = req.session.admin;
+  adminHelper.getAllShops().then((shops) => {
+   res.json( { admin: true, administator, shops });
   });
 });
 

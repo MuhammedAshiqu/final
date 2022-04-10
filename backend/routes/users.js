@@ -29,11 +29,18 @@ router.get("/",verifySignedIn, async function (req, res, next) {
     })
     
   }
-  
-  userHelper.getAllProducts().then((products) => {
-res.json({admin:false,products,user,cartCount})
+
+
+  // userHelper.getAllShops().then((shop)=>{
+  //   res.json({admin:false,shop,user})
+  // })
+  // // userHelper.getAllProducts().then((products) => {
+
+
+    
+  //   res.json({admin:false,products,user,cartCount})
   });
-});
+
 
 router.get("/signup", function (req, res) {
   if (req.session.signedIn) {
@@ -292,31 +299,6 @@ router.get('/wishlist',(req,res)=>{
   })
   
 })
-
-// router.get('/chat/:id',(req,res)=>{
-//  const expected = req.params.id
-//  const user=nw
-
-//   userHelper.getall(user,expected).then((response)=>{
-//     res.json({message:response})
-//   })
- 
-// })
-// router.post('/chat',async(req,res)=>{
-  
-// const user=nw
-// console.log(req.body);
-
-// // const isReaded=await userHelper.getIsReaded()
-// // console.log('isReaded'+isReaded.length);
-// //  let allMessages = await db.get().collection('chat').find({reciver:user.Email,sender:'abhinchand@gmail.com'}).toArray();
-// userHelper.sendChat(user,req.body).then((result)=>{
-  
-//   res.json({message:result})
- 
-// })
-
-// })
 router.get('/chat/:id',verifySignedIn,(req,res)=>{
   const expected=req.params.id
   const user=nw
@@ -328,20 +310,13 @@ router.get('/chat/:id',verifySignedIn,(req,res)=>{
 router.get('/chat1/:id',verifySignedIn,(req,res)=>{
   const expected = req.params.id
   const user=nw
- 
    userHelper.getOne(user,expected).then((response)=>{
      res.json({message:response})
    })
-  
  })
 router.post('/chat',verifySignedIn,async(req,res)=>{
-  
 const user=nw
 console.log(req.body);
-
-// const isReaded=await userHelper.getIsReaded()
-// console.log('isReaded'+isReaded.length);
-//  let allMessages = await db.get().collection('chat').find({reciver:user.Email,sender:'abhinchand@gmail.com'}).toArray();
 userHelper.sendChat(user,req.body).then((result)=>{
   
   res.json({message:result})

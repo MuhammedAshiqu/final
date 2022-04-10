@@ -28,7 +28,7 @@ function Main() {
   };
   const getData = () => {
     console.log("getdata working");
-    axios.get(process.env.REACT_APP_API_URL).then((response) => {
+    axios.get("http://localhost:8008").then((response) => {
       console.log(response.data);
       setcartCount(response.data.cartCount);
       setstate(response.data.products);

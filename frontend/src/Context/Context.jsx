@@ -1,6 +1,13 @@
 import React, { createContext, useState } from 'react';
 export const DataContext = createContext();
 
+const getSeller = () => {
+    if (localStorage.getItem('seller')) {
+        return JSON.parse(localStorage.getItem('seller'));
+    }
+    return {};
+};
+
 function Context({ children }) {
     const [state, setstate] = useState([]);
     const [isLoaged, setisLoaged] = useState(false);
@@ -9,7 +16,7 @@ function Context({ children }) {
     const [contact, setcontact] = useState([]);
     const [user, setuser] = useState();
 
-    const [seller, setseller] = useState();
+    const [seller, setseller] = useState(getSeller());
     const [sellerTrue, setsellerTrue] = useState(true);
     const [cartCount, setcartCount] = useState([]);
 

@@ -39,7 +39,7 @@ function CardS({ i, setres }) {
   console.log("prod",i);
   return (
     <div className="card-item">
-      <Link to={`/productd/${i._id}`}>
+      {/* <Link to={`/productd/${i._id}`}>
         <ToastContainer
           position="top-center"
           autoClose={2001}
@@ -50,7 +50,7 @@ function CardS({ i, setres }) {
           pauseOnFocusLoss={false}
           draggable
           pauseOnHover
-        />
+        /> */}
 
         <figure class="snip1171">
           <img src={i?.url} alt="sample71" />
@@ -70,7 +70,7 @@ function CardS({ i, setres }) {
         </figure>
 
         <div></div>
-      </Link>
+      {/* </Link> */}
     </div>
   );
 }
