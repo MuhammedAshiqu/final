@@ -29,14 +29,15 @@ function Main() {
   const getData = () => {
     console.log("getdata working");
     axios.get(process.env.REACT_APP_API_URL).then((response) => {
-      console.log("res data",response.data);
+      console.log("product data",response.data);
       setcartCount(response.data.cartCount);
-      setstate(response.data.shop);
+      // setstate(response.data.product);
     });
   };
   const data=()=>{
-    axios.get("http://localhost:8008/",).then((res)=>{
-      console.log("new  q ",res);
+    axios.get("http://localhost:8008/seller",).then((res)=>{
+      console.log("shop data",res);
+      setstate(res.data.shop)
     })
   }
 

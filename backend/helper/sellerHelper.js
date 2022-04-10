@@ -48,6 +48,17 @@ module.exports = {
         });
     },
 
+    showShop:(email) => {
+        return new Promise(async (resolve, reject) => {
+          let products = await db
+            .get()
+            .collection(collections.SHOPS_COLLECTION)
+            .find()
+            .toArray();
+          resolve(products);
+        });
+    },
+
     addShop: async (shop, seller, callback) => {
         return new Promise((resolve, reject) => {
             // console.log("my",seller);

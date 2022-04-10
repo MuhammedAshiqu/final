@@ -14,7 +14,11 @@ const verifySignedIn = (req, res, next) => {
         res.json({ message: 'login first' });
     }
 };
-
+router.get('/',(req,res)=>{
+    sellerHelper.showShop().then((shop)=>{
+        res.json({shop})
+    })
+})
 router.get('/signup', function (req, res) {
     if (req.session.signedIn) {
         res.redirect('/seller');
