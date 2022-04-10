@@ -148,6 +148,14 @@ router.get('/shop-orders', (req, res) => {
     sellerHelper.getAllOrders().then((response) => {
         res.json({ response });
     });
+    router.get('/messages',verifySignedIn,function(req,res,next){
+        let user=nwslr;
+        console.log("new",nw)
+        sellerHelper.getmessages(user).then((msg)=>{
+          console.log("imad",msg)
+          res.json(msg)
+        })
+    })
 });
 
 module.exports = router;

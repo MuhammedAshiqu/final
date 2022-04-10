@@ -41,6 +41,7 @@ import Shoporders from "./Components/Seller/ViewShopOrders/ShopOrder";
 // import SellerH from './Components/Seller/SellerH/SellerH';
 import SellerHeader from "./Components/Seller/SellerHeader/SellerHeader";
 import Showallsellers from "./Components/ADMINS/ShowAllSellers/Showallsellers";
+import ChatTable1 from "./Components/USERS/Chattable/Chattable1";
 
 function App() {
   const { Users, Cartcount, AdminTrue, IsLoaged, sellerTrue } =
@@ -93,6 +94,8 @@ function App() {
         <Route path="/productd/:id" component={Productd} />
         <Route path="/productview" component={Productview} />
         <Route path="/messages" component={ChatTable} />
+        <Route path="/messages1" component={ChatTable1} />
+
         <Route path="/manageproduct" component={ManageProduct} />
         <Route path="/editproduct/:id" component={NewAdd1} />
         <Route path="/add-product" component={NewAdd} />

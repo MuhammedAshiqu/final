@@ -80,6 +80,9 @@ function SellerHeader() {
               <li>
                 <Link to="/seller-orders">Orders</Link>
               </li>
+              <li>
+                <Link to='/messages1'>Chat</Link>
+              </li>
             </ul>
           </div>
           <div class="login">
