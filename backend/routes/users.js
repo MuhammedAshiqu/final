@@ -30,7 +30,6 @@ router.get("/",verifySignedIn, async function (req, res, next) {
     
   }
   userHelper.getAllShops().then((shop)=>{
-    console.log("hh",shop);
     res.json({admin:false,shop,user})
   })
   // userHelper.getAllProducts().then((products) => {
