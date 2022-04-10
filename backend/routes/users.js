@@ -29,8 +29,13 @@ router.get("/",verifySignedIn, async function (req, res, next) {
     })
     
   }
-  
-  userHelper.getAllProducts().then((products) => {
+
+
+  userHelper.getAllShops().then((shop)=>{
+    res.json({admin:false,shop,user})
+  })
+  // userHelper.getAllProducts().then((products) => {
+
 
     
     res.json({admin:false,products,user,cartCount})
