@@ -44,7 +44,7 @@ function NewAdd() {
             seturl(response.data.url)
         })
         url && await axios.post('http://localhost:8008/addproduct', { input: input,url:url }).then((res) => {
-            console.log(res);
+            console.log("ee",res);
             res.data.vibe && alert('successfuly added')
             setimage()
             setisloading(false)
