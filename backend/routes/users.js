@@ -31,9 +31,7 @@ router.get("/",verifySignedIn, async function (req, res, next) {
   }
   
   userHelper.getAllProducts().then((products) => {
-
-    
-    res.json({admin:false,products,user,cartCount})
+res.json({admin:false,products,user,cartCount})
   });
 });
 
@@ -104,7 +102,7 @@ router.get("/signout", function (req, res) {
 router.get("/cart", verifySignedIn, async function (req, res) {
   console.log("nwww",nw);
   let user = nw;
-  let userId = nw._id;
+  let userId = nw?._id;
   let cartCount = await userHelper.getCartCount(userId);
   let cartProducts = await userHelper.getCartProducts(userId);
   let total = null;
@@ -121,7 +119,7 @@ router.get("/cart", verifySignedIn, async function (req, res) {
 });
 router.get('/userproducts',verifySignedIn,(req,res)=>{
   userHelper.getSignedUserProducts(nw.Email).then((userproducts)=>{
-    console.log("one",userproducts);
+    // console.log("one",userproducts);
     res.json(userproducts)
   })
 })

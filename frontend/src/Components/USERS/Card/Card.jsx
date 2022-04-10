@@ -36,7 +36,7 @@ function CardS({ i, setres }) {
   useEffect(() => {
     // it ? setisLoaged(true) :setisLoaged(false)
   }, [isLoaged]);
-
+  console.log("prod",i);
   return (
     <div className="card-item">
       <Link to={`/productd/${i._id}`}>
@@ -53,16 +53,16 @@ function CardS({ i, setres }) {
         />
 
         <figure class="snip1171">
-          <img src={i.url} alt="sample71" />
-          <div class="price">&#8377; {i.Price}</div>
+          <img src={i?.url} alt="sample71" />
+          <div class="price">&#8377; {i?.Price}</div>
           <figcaption>
-            <h3>{i.Name}</h3>
-            <p>upload :{i.CreatedBy}</p>
+            <h3>{i?.Name}</h3>
+            <p>uploaded By :{i?.CreatedBy?.Name}</p>
 
-            <button onClick={() => addItem(i._id)}>Add to Cart</button>
+            {/* <button onClick={() => addItem(i?._id)}>Add to Cart</button> */}
             {isLoaged &&
               <>
-                <Link to={`/chat/${i.CreatedBy}`}> <button >chat</button></Link>
+                <Link to={`/chat/${i?.CreatedBy}`}> <button >chat</button></Link>
               </>
             }
 

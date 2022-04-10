@@ -20,7 +20,7 @@ function AddShop() {
   const [input, setinput] = useState({
     name: '',
     category: '',
-    price: null,
+    phone: '',
     description: '',
   });
   const handleChange = (e) => {
@@ -159,7 +159,7 @@ function AddShop() {
 
             <input
               onChange={handleChange}
-              name='price'
+              name='phone'
               placeholder='Contact Number'
               type='text'
               required

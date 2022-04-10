@@ -129,8 +129,6 @@ function Productd() {
 
 
 
-
-
   const description = () => {
     console.log("product id", id)
     axios.get(`http://localhost:8008/describ/${id}`).then((response) => {
@@ -201,11 +199,11 @@ function Productd() {
       {detail.Description}
       </h5>
 		</div>
-		<button class="buy--btn" onClick={() => addItem(detail._id)} >ADD TO CART</button>
+		<button class="buy--btn" onClick={() => addItem(detail?._id)} >ADD TO CART</button>
     <br /><br /><br />
     <h3>UPLOADED BY</h3><br />
 			<h5>
-      {detail.CreatedBy}
+      {detail?.CreatedBy?.Name}
       </h5>
 	</div>
 </section>

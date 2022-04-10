@@ -56,7 +56,7 @@ module.exports = {
             const shops = {
                 Name: shop.input.name,
                 Category: shop.input.category,
-                Price: shop.input.price,
+                Phone: shop.input.phone,
                 Description: shop.input.description,
                 url: shop.url,
                 CreatedBy: seller?.sellerId,

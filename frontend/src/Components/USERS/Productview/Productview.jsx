@@ -15,7 +15,7 @@ function Productview() {
 
   const getData = () => {
     console.log("getdata working");
-    axios.get(process.env.REACT_APP_API_URL).then((response) => {
+    axios.get("http://localhost:8008").then((response) => {
       console.log(response.data);
       setcartCount(response.data.cartCount);
       setstate(response.data.products);
@@ -29,7 +29,7 @@ function Productview() {
   return (
     <div>
       <div className="map-items">
-        {state.map((i) => {
+        {state.map((i,index) => {
           return <CardS setres={setres} i={i} />;
         })}
       </div>

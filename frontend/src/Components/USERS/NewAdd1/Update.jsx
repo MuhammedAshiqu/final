@@ -9,7 +9,7 @@ function Update() {
     const [input, setinput] = useState({
         Name: '',
         Category: '',
-        Price: null,
+        Price: '',
         Description: ''
     })
     const handleChange = (e) => {

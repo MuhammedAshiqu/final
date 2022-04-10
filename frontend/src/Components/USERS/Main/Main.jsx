@@ -96,12 +96,6 @@ function Main() {
 
       <ShopView/>
 
-
-      <div
-        className="mid-hero"
-        style={{ padding: "100px", height: "50px", width: "50px" }}
-      ></div>
-
     </div>
   );
 }

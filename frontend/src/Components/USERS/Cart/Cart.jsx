@@ -51,17 +51,17 @@ function Cart() {
            
        })
     }
-    const wishListItems=()=>{
-        axios.get('http://localhost:8008/wishlist').then((response)=>{
-            console.log('wish list items are',response);
-        })
+    // const wishListItems=()=>{
+    //     axios.get('http://localhost:8008/wishlist').then((response)=>{
+    //         console.log('wish list items are',response);
+    //     })
        
-    }
+    // }
     
     useEffect(() => {
         setadminTrue(false)
         getCartItems()
-        wishListItems()
+        // wishListItems()
         
     }, [re])
     return (
