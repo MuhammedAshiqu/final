@@ -96,7 +96,7 @@ module.exports = {
                 Price: product.input.price,
                 Description: product.input.description,
                 url: product.url,
-                CreatedBy: product.sellerId,
+                CreatedBy: product.sellerId.Email,
                 reviews: [],
             };
 
